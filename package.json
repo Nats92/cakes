@@ -1,0 +1,19 @@
+{
+  "name": "cakes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nats92/cakes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nats92/cakes/issues"
+  },
+  "homepage": "https://github.com/Nats92/cakes#readme"
+}
