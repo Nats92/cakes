@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Nats92/cakes/issues"
   },
-  "homepage": "https://github.com/Nats92/cakes#readme"
+  "homepage": "https://github.com/Nats92/cakes#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-less": "^2.0.0"
+  },
+  "dependencies": {}
 }

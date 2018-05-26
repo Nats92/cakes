@@ -1,0 +1,81 @@
+.intro {
+    max-width: 1366px;
+    margin: 0 auto;
+    min-height: 940px;
+    background-image: url("../img/intro-cake.png"),
+                      url("../img/strawberry.png"),
+                      url("../img/flower.png"),
+                      url("../img/strawberry-full.png");
+    background-repeat: no-repeat, 
+                       no-repeat,
+                       no-repeat,
+                       no-repeat;
+    background-position: top right,
+                         562px 20px,
+                         525px 205px,
+                         358px 368px;
+}
+.intro__text-wrap {
+    max-width: 600px;
+    padding: 134px 43px 0 74px;
+    box-sizing: border-box;
+}
+.intro__handmade {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 41px;
+    line-height: 78px; 
+}
+.intro__choose-cake {
+    padding-left: 66px;
+    padding-right: 66px;
+    margin-bottom: 146px;
+}
+.intro__features {
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+    list-style: none;
+}
+.intro__features-item {
+    position: relative;
+
+    display: inline-block;
+    box-sizing: border-box;
+
+    font-family: "Circe", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+.intro__features-item--natural {
+    width: 160px;
+    padding-left: 66px;
+    margin-right: 60px;
+}
+.intro__features-item--natural::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: url("../img/natural-icon.png");
+    width: 55px;
+    height: 55px;
+}
+.intro__features-item--delivery {
+    width: 250px;
+    padding-left: 68px;
+}
+.intro__features-item--delivery::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: url("../img/delivery-icon.png");
+    width: 55px;
+    height: 55px;
+}
