@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Торты на заказ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="main-page">
     <header class="main-header  centering-wrap">
@@ -25,7 +25,7 @@
     <main>
         <section class="intro">
             <div class="intro__text-wrap">
-                <h1 class="main-title section-title">Торты <br> на заказ</h1>
+                <h1 class="main-title">Торты <br> на заказ</h1>
                 <p class="intro__handmade  section-subtitle">Ручная работа</p>
                 <a class="intro__choose-cake  page-btn" href="#">Выбрать торт</a>
                 <ul class="intro__features">
@@ -98,76 +98,76 @@
             <h2 class="individual-order__title  section-title">Индивидуальный заказ</h2>
             <p class="individual-order__subtitle  section-subtitle">Соберите торт в 3 шага</p>
             <ol class="individual-order__steps-list">
-                <li class="individual-order__steps-item">
-                    <h3 class="individual-order__steps-item-title" data-number="01">Выберите начинку</h3>
-                    <div class="individual-order__slider-wrap  slider__wrap">
-                        <ul class="individual-order__fills-list  slider__list">
-                            <li class="individual-order__fills-item  slider__item">
-                                <img class="individual-order__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
-                                <div class="individual-order__fills-text-wrap">
-                                    <h4 class="individual-order__fills-title">Шоколадный ганаш</h4>
-                                    <p class="individual-order__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
-                                    <span class="individual-order__fills-price">1000 руб/кг</span>
-                                    <button class="individual-order__fills-btn  page-btn" type="button">Выбрать</button>
+                <li class="individual-order__steps-item  select-fill">
+                    <h3 class="individual-order__steps-title  select-fill__title" data-number="01">Выберите начинку</h3>
+                    <div class="select-fill__slider-wrap  slider__wrap">
+                        <ul class="select-fill__fills-list  slider__list">
+                            <li class="select-fill__fills-item  slider__item">
+                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
+                                <div class="select-fill__fills-text-wrap">
+                                    <h4 class="select-fill__fills-title">Шоколадный ганаш</h4>
+                                    <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                                    <span class="select-fill__fills-price">1000 руб/кг</span>
+                                    <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
                                 </div></li>
-                            <li class="individual-order__fills-item  slider__item  hidden">
-                                <img class="individual-order__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
-                                <div class="individual-order__fills-text-wrap">
-                                    <h4 class="individual-order__fills-title">Шоколадный ганаш</h4>
-                                    <p class="individual-order__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
-                                    <span class="individual-order__fills-price">1000 руб/кг</span>
-                                    <button class="individual-order__fills-btn  page-btn" type="button">Выбрать</button>
+                            <li class="select-fill__fills-item  slider__item  hidden">
+                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
+                                <div class="select-fill__fills-text-wrap">
+                                    <h4 class="select-fill__fills-title">Шоколадный ганаш</h4>
+                                    <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                                    <span class="select-fill__fills-price">1000 руб/кг</span>
+                                    <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
                                 </div></li>
                         </ul>
-                        <div class="individual-order__slider-controls-wrap  slider__controls-wrap">
-                            <button class="individual-order__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
-                            <button class="individual-order__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
+                        <div class="select-fill__slider-controls-wrap  slider__controls-wrap">
+                            <button class="select-fill__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
+                            <button class="select-fill__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
                         </div>
-                        <div class="individual-order__slider-counter  slider__counter-wrap">
+                        <div class="select-fill__slider-counter  slider__counter-wrap">
                             <span class="slider__counter slider__counter--current">1</span>
                             <span class="slider__counter slider__counter--amount">12</span>
                         </div>
                     </div>
                 </li>
-                <li class="individual-order__steps-item">
-                    <h3 class="individual-order__steps-item-title" data-number="02">Размер</h3>
-                    <ul class="individual-order__sizes-list">
-                            <li class="individual-order__sizes-item">
-                                <img class="individual-order__sizes-img" src="img/circle-1kg.png" width="110" height="110">
-                                <p class="individual-order__sizes-signification">17-18 см</p>
-                                <p class="individual-order__sizes-signification">(1 кг – 6 персон)</p></li>
-                            <li class="individual-order__sizes-item">
-                                <img class="individual-order__sizes-img" src="img/circle-2kg.png" width="154" height="154">
-                                <p class="individual-order__sizes-signification">23-24 см</p>
-                                <p class="individual-order__sizes-signification">(10 – 12 персон)</p></li>
-                            <li class="individual-order__sizes-item">
-                                <img class="individual-order__sizes-img" src="img/circle-5kg.png" width="173" height="174">
-                                <p class="individual-order__sizes-signification">Два яруса 25 и 20 см</p>
-                                <p class="individual-order__sizes-signification">(15–20 персон)</p></li>
-                            <li class="individual-order__sizes-item">
-                                <img class="individual-order__sizes-img" src="img/circle-8kg.png" width="200" height="202">
-                                <p class="individual-order__sizes-signification">Три яруса 30,25 и 18 см</p>
-                                <p class="individual-order__sizes-signification">(25–30 персон)</p></li>
-                        </ul>
+                <li class="individual-order__steps-item  select-size">
+                    <h3 class="individual-order__steps-title  select-size__title" data-number="02">Размер</h3>
+                    <ul class="select-size__sizes-list">
+                        <li class="select-size__sizes-item">
+                            <img class="select-size__sizes-img" src="img/circle-1kg.png" width="110" height="110">
+                            <p class="select-size__sizes-signification">17-18 см</p>
+                            <p class="select-size__sizes-signification">(1 кг – 6 персон)</p></li>
+                        <li class="select-size__sizes-item">
+                            <img class="select-size__sizes-img" src="img/circle-2kg.png" width="154" height="154">
+                            <p class="select-size__sizes-signification">23-24 см</p>
+                            <p class="select-size__sizes-signification">(10 – 12 персон)</p></li>
+                        <li class="select-size__sizes-item">
+                            <img class="select-size__sizes-img" src="img/circle-5kg.png" width="173" height="174">
+                            <p class="select-size__sizes-signification">Два яруса 25 и 20 см</p>
+                            <p class="select-size__sizes-signification">(15–20 персон)</p></li>
+                        <li class="select-size__sizes-item">
+                            <img class="select-size__sizes-img" src="img/circle-8kg.png" width="200" height="202">
+                            <p class="select-size__sizes-signification">Три яруса 30,25 и 18 см</p>
+                            <p class="select-size__sizes-signification">(25–30 персон)</p></li>
+                    </ul>
                 </li>
-                <li class="individual-order__steps-item  individual-order__steps-item--decoration">
-                    <h3 class="individual-order__steps-item-title" data-number="03">Оформление</h3>
-                    <div class="individual-order__slider-wrap  slider__wrap">
-                        <ul class="individual-order__decoration-list  slider__list">
-                            <li class="individual-order__decoration-item  slider__item">
-                                <img class="individual-order__decoration-img" src="img/cake-1.jpg" width="288" height="232">
-                                <h4 class="individual-order__decoration-name">Ягодное ассорти</h4>
-                                <p class="individual-order__decoration-price">700 руб/кг</p></li>
-                            <li class="individual-order__decoration-item  slider__item">
-                                <img class="individual-order__decoration-img" src="img/cake-2.jpg" width="283" height="214">
-                                <h4 class="individual-order__decoration-name">Маршмэллоу</h4>
-                                <p class="individual-order__decoration-price">600 руб/кг</p></li>
+                <li class="individual-order__steps-item  select-decoration">
+                    <h3 class="individual-order__steps-title  select-decoration__title" data-number="03">Оформление</h3>
+                    <div class="select-decoration__slider-wrap  slider__wrap">
+                        <ul class="select-decoration__decoration-list  slider__list">
+                            <li class="select-decoration__decoration-item  slider__item">
+                                <img class="select-decoration__decoration-img" src="img/cake-1.jpg" width="288" height="232">
+                                <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
+                                <p class="select-decoration__decoration-price">700 руб/кг</p></li>
+                            <li class="select-decoration__decoration-item  slider__item">
+                                <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214">
+                                <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
+                                <p class="select-decoration__decoration-price">600 руб/кг</p></li>
                         </ul>
-                        <div class="individual-order__slider-controls-wrap  slider__controls-wrap">
-                            <button class="individual-order__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
-                            <button class="individual-order__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
+                        <div class="select-decoration__slider-controls-wrap  slider__controls-wrap">
+                            <button class="select-decoration__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
+                            <button class="select-decoration__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
                         </div>
-                        <div class="individual-order__slider-counter  slider__counter-wrap">
+                        <div class="select-decoration__slider-counter  slider__counter-wrap">
                             <span class="slider__counter slider__counter--current">2</span>
                             <span class="slider__counter slider__counter--amount">35</span>
                         </div>

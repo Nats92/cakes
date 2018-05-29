@@ -20,33 +20,38 @@
     margin-right: auto;
     padding: 0;
 
-    font-family: "Circe", sans-serif;
+    font-family: @circe;
     font-size: 13px;
     line-height: 33px;
-    color: #2d2829;
+    color: @main-text-color;
     list-style: none;
 }
 .main-nav__menu li {
     margin-right: 44px;
-}
-.main-nav__menu li:last-child {
-    margin-right: 0;
+
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 .main-nav__menu-link {
     font: inherit;
     color: inherit;
     text-decoration: none;
-}
-    .main-nav__menu-link:hover,
-    .main-nav__menu-link:focus {
+
+
+    &:hover,
+    &:focus {
         color: @pink-color;
     }
-    .main-nav__menu-link:active {
+
+    &:active {
         opacity: .3;
     }
+}
 .main-nav__tel {
     font: inherit;
-    font-weight: 700;
     color: inherit;
+    font-weight: 700;
     text-decoration: none;
 }

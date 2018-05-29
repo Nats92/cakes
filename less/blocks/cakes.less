@@ -25,12 +25,26 @@
     background-color: #fff;
     box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .05);
 
-    font-family: "Circe", sans-serif;
-}
-    .cakes__list-item:hover,
-    .cakes__list-item:focus {
+    font-family: @circe;
+
+    &--big {
+        width: 695px;
+        height: 652px;
+
+        margin-bottom: 46px;
+    }
+
+    &--small {
+        width: 484px;
+        height: 305px;
+    }
+
+    &:hover,
+    &:focus {
         box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .13);
     }
+}
+    
 .cakes__list-item-container {
     display: flex;
     flex-direction: column;
@@ -39,16 +53,7 @@
     width: 484px;
     margin-bottom: 46px;
 }
-.cakes__list-item--big {
-    width: 695px;
-    height: 652px;
 
-    margin-bottom: 46px;
-}
-.cakes__list-item--small {
-    width: 484px;
-    height: 305px;
-}
 .cakes__list-item-title {
     position: absolute;
     left: 46px;
@@ -58,7 +63,7 @@
 
     font-size: 24px;
     line-height: 29px;
-    color: #2d2829;
+    color: @main-text-color;
 }
 .cakes__list-item-subtitle {
     margin: 0;
@@ -77,7 +82,7 @@
 
     font-size: 20px;
     line-height: 29px;
-    color: #2d2829;
+    color: @main-text-color;
     text-decoration: none;
 }
     .cakes__list-item-look svg {
@@ -85,11 +90,11 @@
         bottom: 8px;
         right: 0;
 
-        fill: #1e201d;
+        fill: #757575;
     }
     .cakes__list-item-look:hover svg,
     .cakes__list-item-look:focus svg {
-        fill: #f50049;
+        fill: @pink-color;
     } 
 .cakes__list-item-look-text {
     margin-right: 47px;

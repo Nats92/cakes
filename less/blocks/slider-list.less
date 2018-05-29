@@ -1,8 +1,5 @@
 .slider__wrap {
     position: relative;
-    max-width: 900px;
-    margin-left: 114px;
-    padding: 27px 0;
 }
 .slider__controls-wrap {
     position: absolute;
@@ -26,23 +23,28 @@
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
-}
-.slider__control--right {
-    background-image: url("../img/arrow-right.png");
-    outline: none;
-}
-    .slider__control--right:hover,
-    .slider__control--right:focus {
-        background-image: url("../img/arrow-right-hover.png");
+
+    &--right {
+        background-image: url("../img/arrow-right.png");
+        outline: none;
+
+        &:hover,
+        &:focus {
+            background-image: url("../img/arrow-right-hover.png");
+        }
     }
-.slider__control--left {
-    background-image: url("../img/arrow-left.png");
-    outline: none;
-}
-    .slider__control--left:hover,
-    .slider__control--left:focus {
-        background-image: url("../img/arrow-left-hover.png");
+
+    &--left {
+        background-image: url("../img/arrow-left.png");
+        outline: none;
+
+        &:hover,
+        &:focus {
+            background-image: url("../img/arrow-left-hover.png");
+        }
     }
+}
+    
 .slider__list {
     position: relative;
 
@@ -61,16 +63,18 @@
     position: absolute;
     bottom: 17px;
     right: 4px;
-
-    font-family: "Circe", sans-serif;
+}
+.slider__counter {
+    font-family: @circe;
     font-size: 18px;
     line-height: 25px;
     color: rgba(47, 47, 47, .7);
-}
-.slider__counter--current::after {
-    position: absolute;
-    top: 0;
-    right: 15px;
 
-    content: "/";
+    &--current::after {
+        position: absolute;
+        top: 0;
+        right: 15px;
+
+        content: "/";
+    }
 }

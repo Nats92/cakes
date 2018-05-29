@@ -45,37 +45,45 @@
     display: inline-block;
     box-sizing: border-box;
 
-    font-family: "Circe", sans-serif;
+    font-family: @circe;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
     font-style: normal;
     color: #000;
-}
-.intro__features-item--natural {
-    width: 160px;
-    padding-left: 66px;
-    margin-right: 60px;
-}
-.intro__features-item--natural::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
 
-    content: url("../img/natural-icon.png");
-    width: 55px;
-    height: 55px;
-}
-.intro__features-item--delivery {
-    width: 250px;
-    padding-left: 68px;
-}
-.intro__features-item--delivery::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
 
-    content: url("../img/delivery-icon.png");
-    width: 55px;
-    height: 55px;
+    &--natural {
+        width: 160px;
+        padding-left: 66px;
+        margin-right: 60px;
+
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            content: url("../img/natural-icon.png");
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+
+    &--delivery {
+        width: 250px;
+        padding-left: 68px;
+
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            content: url("../img/delivery-icon.png");
+            width: 55px;
+            height: 55px;
+        }
+    }
 }
