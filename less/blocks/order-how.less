@@ -1,0 +1,75 @@
+.order-how__outer-wrap {
+    background-image: linear-gradient(#ea3b41 0%, #d92a34 100%);
+    margin-bottom: 63px;
+}
+.order-how {
+    max-width: @max-desktop-width;
+    min-height: 704px;
+    padding-top: 109px;
+    margin: 0 auto;
+    background-color: #e83c41;
+    background-image: url("../img/order-how-bg.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+
+    color: #fff;
+}
+.order-how__inner-wrap {
+    max-width: 548px;
+    padding-right: 60px;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.order-how__title {
+    margin-bottom: 28px;
+    padding-left: 12px;
+
+    color: inherit;
+    letter-spacing: 0;
+}
+.order-how__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: num;
+}
+.order-how__item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 29px;
+    
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        counter-increment: num 1;
+
+        content: counter(num);
+        font-family: @playFair;
+        font-size: 64px;
+        line-height: 32px;
+    }
+
+    &:first-child::before {
+        left: 7px;
+    }
+}
+.order-how__item-title {
+    display: block;
+    margin-bottom: 3px;
+
+    font-family: @circe;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 27px;
+}
+.order-how__item-text {
+    margin: 0;
+
+    font-family: @circe;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+}

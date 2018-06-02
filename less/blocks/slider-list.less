@@ -61,20 +61,23 @@
 }
 .slider__counter-wrap {
     position: absolute;
-    bottom: 17px;
-    right: 4px;
 }
 .slider__counter {
+    position: relative;
     font-family: @circe;
     font-size: 18px;
     line-height: 25px;
     color: rgba(47, 47, 47, .7);
 
-    &--current::after {
-        position: absolute;
-        top: 0;
-        right: 15px;
+    &--current {
+        padding-right: 2px;
 
-        content: "/";
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -4px;
+
+            content: "/";
+        }
     }
 }

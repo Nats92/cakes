@@ -1,0 +1,80 @@
+.features {
+    max-width: 1366px;
+    min-height: 695px;
+    margin: 0 auto;
+    background-image: url("../img/features-berries-illustr.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.features__title {
+    padding: 12px 0;
+    padding-right: 17px;
+
+    text-align: center;
+    letter-spacing: 0;
+}
+.features__subtitle {
+    margin-bottom: 128px;
+
+    text-align: center;
+}
+.features__list {    
+    max-width: 458px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 290px;
+    padding: 0;
+    list-style: none;
+}
+.features__item {
+    position: relative;
+    padding-left: 83px;
+
+    &--natural-ingredients::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-30px);
+
+        width: 61px;
+        height: 61px;
+        content: "";
+        background-image: url("../img/natural-icon.png");
+        background-size: contain;
+    }
+    &--fresh-cake::before {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        transform: translateY(-27px);
+
+        width: 55px;
+        height: 54px;
+        content: "";
+        background-image: url("../img/delivery-icon.png");
+        background-size: contain;
+    }
+}
+.features__item-title {
+    display: block;
+    margin-bottom: 3px;
+
+    font-family: @circe;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000;
+}
+.features__item-text {
+    margin: 0;
+    margin-bottom: 33px;
+
+    font-family: @circe;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+}
+
