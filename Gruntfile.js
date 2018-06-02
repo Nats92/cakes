@@ -21,10 +21,19 @@ module.exports = function(grunt) {
                     src: ["*.html"],
                     dest: "build"
                 }]
+            },
+            img: {
+                files: [{
+                    expand: true,
+                    src: ["img/**"],
+                    dest: "build"
+                }]
             }
         },
         clean: {
-            build: ["build"]
+            build: ["build"],
+            img: ["build/img"],
+            svg: ["build/img/*.svg"]
         },
         less: {
             style: {
@@ -69,10 +78,39 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        svgstore: {
+            options: {
+                svg: {
+                    style: "display: none",
+                    xmlns: "http://www.w3.org/2000/svg"
+                }
+            },
+            symbols: {
+                files: {
+                    "build/img/symbols.svg" : ["img/svg/*.svg"]
+                }
+            }
+        },
+        svgmin: {
+            symbols: {
+                files: [{
+                    expand: true,
+                    src: ["img/svg/*.svg"]
+                }]
+            }
+        },
         watch: {
             html: {
                 files: ["*.html"],
-                tasks: ["copy: html"]
+                tasks: ["copy:html"]
+            },
+            img: {
+                files: ["img/**/*.{png,jpg}"],
+                tasks: ["clean:img", "copy:img", "imagemin"]
+            },
+            svg: {
+                files: ["img/svg/**"],
+                tasks: ["clean:svg", "svgmin", "svgstore"]
             },
             style: {
                 files: ["less/**/*.less"],
@@ -92,14 +130,17 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('serve', ['browserSync', 'watch']);
+    grunt.registerTask("serve", ["browserSync", "watch"]);
+    grunt.registerTask("symbols", ["svgmin", "svgstore"]);
     grunt.registerTask("build", [
         "clean",
         "copy",
         "less",
         "postcss",
         "csso",
-        "imagemin"
+        "imagemin",
+        "svgmin",
+        "svgstore"
     ]);
 
 }
