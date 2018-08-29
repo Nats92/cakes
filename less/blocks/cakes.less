@@ -3,10 +3,24 @@
     margin-bottom: 44px;
     padding: 0 73px;
     box-sizing: border-box;
+
+    @media @tablet-width {
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
+    @media @mobile-width {
+    }
 }
 .cakes__title {
     margin: 0;
     margin-bottom: 50px;
+
+    @media @tablet-width {
+        margin-bottom: 32px;
+    }
+    @media @mobile-width {
+        margin-bottom: 25px;
+    }
 }
 .cakes__list {
     display: flex;
@@ -21,9 +35,11 @@
 }
 .cakes__list-item {
     position: relative;
-
+    
+    display: block;
     background-color: #fff;
     box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .05);
+    overflow: hidden;
 
     font-family: @circe;
 
@@ -32,19 +48,66 @@
         height: 652px;
 
         margin-bottom: 46px;
+
+        @media @tablet-width {
+            width: 419px;
+            height: 388px;
+            margin-bottom: 18px;
+        }
+
+        @media @mobile-width {
+            width: 280px;
+            height: 120px;
+            margin-bottom: 11px;
+        }
     }
 
     &--small {
         width: 484px;
         height: 305px;
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+
+        @media @tablet-width {
+            width: 288px;
+            height: 184px;
+        }
+
+        @media @mobile-width {
+            width: 280px;
+            height: 120px;
+            margin-bottom: 11px;
+
+            &:first-child {
+                margin-bottom: 11px;
+            }
+        }
     }
 
     &:hover,
     &:focus {
         box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .13);
     }
+
+    &:hover .right-arrow-icon,
+    &:focus .right-arrow-icon {
+        fill: @pink-color;
+    }
 }
-    
+.right-arrow-icon {
+    position: absolute;
+    right: 65px;
+    bottom: 35px;
+    vertical-align: middle;
+
+    fill: #757575;
+
+    @media @tablet-width {
+        display: none;
+    }
+}  
 .cakes__list-item-container {
     display: flex;
     flex-direction: column;
@@ -52,6 +115,15 @@
 
     width: 484px;
     margin-bottom: 46px;
+
+    @media @tablet-width {
+        width: 289px;
+        margin-bottom: 18px;
+    }
+
+    @media @mobile-width {
+        margin-bottom: 0;
+    }
 }
 
 .cakes__list-item-title {
@@ -64,38 +136,67 @@
     font-size: 24px;
     line-height: 29px;
     color: @main-text-color;
+
+    @media @tablet-width {
+        left: 25px;
+        top: 21px;
+
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    @media @mobile-width {
+        left: 11px;
+        top: 11px;
+
+        font-size: 14px;
+    }
 }
 .cakes__list-item-subtitle {
-    margin: 0;
+    display: block;
 
     font-size: 20px;
     line-height: 24px;
     color: rgba(45, 40, 41, .7);
     text-decoration: none;
-}
-.cakes__list-item-look {
-    position: absolute;
-    right: 63px;
-    bottom: 28px;
 
-    display: block;
+    @media @tablet-width {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+.cakes__list-item-img {
+    @media @mobile-width {
+        width: 280px;
+        height: 120px;
+    }
+}
+.cakes__list-item-look-text {
+    position: absolute;
+    right: 65px;
+    bottom: 30px;
+
+    margin: 0;
 
     font-size: 20px;
     line-height: 29px;
     color: @main-text-color;
-    text-decoration: none;
-}
-    .cakes__list-item-look svg {
-        position: absolute;
-        bottom: 8px;
-        right: 0;
 
-        fill: #757575;
+    & .right-arrow-icon {
+        position: relative;
+        right: auto;
+        bottom: auto;
+
+        margin-left: 14px;
     }
-    .cakes__list-item-look:hover svg,
-    .cakes__list-item-look:focus svg {
-        fill: @pink-color;
-    } 
-.cakes__list-item-look-text {
-    margin-right: 47px;
+
+    @media @tablet-width {
+        right: 73px;
+        bottom: 15px;
+        font-size: 12px;
+    }
+
+    @media @mobile-width {
+        display: none;
+    }
 }

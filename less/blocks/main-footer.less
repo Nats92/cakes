@@ -4,8 +4,64 @@
 .main-footer__logo {
     font-family: @playFair;
     font-size: 28px;
-    line-height: 43px;
+    line-height: 36px;
     font-weight: 700;
     font-style: normal;
+    letter-spacing: 1.4px;
     color: @main-text-color;
+}
+.main-footer__centering-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+
+    max-width: 1221px;
+    padding: 37px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.main-footer__menu {
+    min-width: 737px;
+}
+.main-footer__menu-link {
+    font-family: @circe;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    font-style: normal;
+    color: @main-text-color;
+}
+.main-footer__social-item {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 15px;
+
+    opacity: .4;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.main-footer__social-item--vk {
+    fill: #000;
+    stroke: #000;
+    stroke-width: 8;
+}
+.main-footer__copyright {
+    padding: 13px 0;
+
+    font-family: @circe;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, .5);
 }

@@ -6,6 +6,10 @@
     padding-right: 10px;
 
     text-align: center;
+
+    @media @tablet-width {
+        margin-bottom: 30px;
+    }
 }
 .individual-order__steps-list {
     margin: 0;
@@ -21,6 +25,10 @@
     padding-bottom: 66px;
     background-color: #fff;
     box-shadow: 0 5px 13px 0 rgba(163, 6, 60, .1);
+
+    @media @tablet-width {
+        padding: 60px 44px;
+    }
 }
 .individual-order__steps-title {
     position: absolute;
@@ -36,6 +44,14 @@
     color: @pink-color;
     letter-spacing: 0.27px;
 
+    @media @tablet-width {
+        width: 112px;
+        padding-top: 26px;
+
+        font-size: 18px;
+        line-height: 23px;
+    }
+
     &::before {
         position: absolute;
         top: 0;
@@ -48,6 +64,11 @@
         line-height: 90px;
         color: inherit;
         letter-spacing: 0.61px;
+
+        @media @tablet-width {
+            font-size: 36px;
+            line-height: 20px;
+        }
     }
 }
 
