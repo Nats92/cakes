@@ -6,11 +6,13 @@
     <meta charset="utf-8">
     <title>Торты на заказ</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/svgxuse-min.js" defer></script>
 </head>
 <body class="main-page">
     <header class="main-header  centering-wrap">
         <nav class="main-header__nav  main-nav">
             <a class="main-header__logo  main-nav__logo">Cakes</a>
+            <button class="main-header__hamburger  main-nav__hamburger  main-nav__hamburger--closed" type="button"></button>
             <ul class="main-header__menu  main-nav__menu">
                 <li><a class="main-header__menu-link  main-nav__menu-link" href="#section-cakes">Наши торты</a></li>
                 <li><a class="main-header__menu-link  main-nav__menu-link" href="#section-individualOrd">Индивидуальный заказ</a></li>
@@ -27,71 +29,83 @@
             <div class="intro__text-wrap">
                 <h1 class="main-title">Торты <br> на заказ</h1>
                 <p class="intro__handmade  section-subtitle">Ручная работа</p>
-                <a class="intro__choose-cake  page-btn" href="#">Выбрать торт</a>
                 <ul class="intro__features">
                     <li class="intro__features-item  intro__features-item--natural">Натуральные ингредиенты</li>
                     <li class="intro__features-item  intro__features-item--delivery">Доставка бесплатно при заказе от 2000 рублей*</li>
                 </ul>
-                </div>
+                <a class="intro__choose-cake  page-btn" href="#">Выбрать торт</a>
+            </div>
         </section>
         <section class="cakes  centering-wrap" id="section-cakes">
             <h2 class="cakes__title  section-title">Наши торты</h2>
             <ul class="cakes__list">
-                <li class="cakes__list-item  cakes__list-item--big">
-                    <h3 class="cakes__list-item-title">Классические
-                        <p class="cakes__list-item-subtitle" href="cakes-classic.html">24 вида</p></h3>
-                    <img class="cakes__list-item-img" src="img/classic.jpg" width="695" height="652" alt="Классический торт, украшеный цветами и фруктами">
-                    <a class="cakes__list-item-look" href="cakes-classic.html">
-                        <span class="cakes__list-item-look-text">Смотреть</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="26" height="16">
-                            <use xlink:href="#arrow-right"/>
-                        </svg></a></li>
+                <li>
+                    <a class="cakes__list-item  cakes__list-item--big" href="cakes-classic.html" aria-label="Все классические торты">
+                        <h3 class="cakes__list-item-title">Классические
+                            <span class="cakes__list-item-subtitle">24 вида</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/classic.jpg">
+                            <source media="(max-width: 768px)" srcset="img/tablet/classic.jpg">
+                            <img class="cakes__list-item-img" src="img/classic.jpg" width="695" height="652" alt="Классический торт, украшеный цветами и фруктами">
+                        </picture>
+                        <p class="cakes__list-item-look-text">Смотреть 
+                            <svg class="right-arrow-icon" width="26" height="16"><use xlink:href="img/symbols.svg#arrow-right"/></svg></p>
+                    </a></li>
                 <li class="cakes__list-item-container">
-                    <div class="cakes__list-item  cakes__list-item--small">
+                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-mousse.html" aria-label="Все муссовые торты">
                         <h3 class="cakes__list-item-title">Муссовые
-                            <p class="cakes__list-item-subtitle" href="cakes-classic.html">12 видов</p></h3>
-                        <img class="cakes__list-item-img" src="img/mousse.jpg" width="484" height="305" alt="Муссовый торт, украшеный шоколадной глазурью и апельсинами">
-                        <a class="cakes__list-item-look" href="cakes-mousse.html" aria-label="Смотреть все муссовые торты">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="24" height="16">
-                                <use xlink:href="#arrow-right"/>
-                            </svg></a>
-                    </div>
-                    <div class="cakes__list-item  cakes__list-item--small">
+                            <span class="cakes__list-item-subtitle">12 видов</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/mousse.jpg">
+                            <source media="(max-width: 768px)" srcset="img/tablet/mousse.jpg">
+                            <img class="cakes__list-item-img" src="img/mousse.jpg" width="484" height="305" alt="Муссовый торт, украшеный шоколадной глазурью и апельсинами">
+                        </picture>
+                        <svg class="right-arrow-icon" width="24" height="16">
+                            <use xlink:href="img/symbols.svg#arrow-right"/></svg></a>
+                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-wedding.html" aria-label="Все свадебные торты">
                         <h3 class="cakes__list-item-title">Свадебные
-                            <p class="cakes__list-item-subtitle" href="cakes-classic.html">20 видов</p></h3>
-                        <img class="cakes__list-item-img" src="img/wedding.jpg" width="484" height="305" alt="Свадебный трёхъярусный белый торт, украшеный нежно-розовыми цветами из мастики">
-                        <a class="cakes__list-item-look" href="cakes-wedding.html" aria-label="Смотреть все муссовые торты">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="24" height="16">
-                                <use xlink:href="#arrow-right"/>
-                            </svg></a>
-                    </div></li>
+                            <span class="cakes__list-item-subtitle">20 видов</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/wedding.jpg">
+                            <source media="(max-width: 768px)" srcset="img/tablet/wedding.jpg">
+                            <img class="cakes__list-item-img" src="img/wedding.jpg" width="484" height="305" alt="Свадебный трёхъярусный белый торт, украшеный нежно-розовыми цветами из мастики">
+                        </picture>
+                        <svg class="right-arrow-icon" width="24" height="16">
+                            <use xlink:href="img/symbols.svg#arrow-right"/></svg></a></li>
                 <li class="cakes__list-item-container">
-                    <div class="cakes__list-item  cakes__list-item--small">    
+                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-mens.html" aria-label="Все торты для мужчин">    
                         <h3 class="cakes__list-item-title">Мужчинам
-                            <p class="cakes__list-item-subtitle" href="cakes-mens.html">12 видов</p></h3>
-                        <img class="cakes__list-item-img" src="img/mens.jpg" width="484" height="305" alt="Торт, украшеный шоколадом и шоколадным соусом">
-                        <a class="cakes__list-item-look" href="cakes-classic.html" aria-label="Смотреть все муссовые торты">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="24" height="16">
-                                <use xlink:href="#arrow-right"/>
-                            </svg></a>
-                    </div>
-                    <div class="cakes__list-item  cakes__list-item--small">
+                            <span class="cakes__list-item-subtitle">12 видов</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/mens.jpg">
+                            <source media="(max-width: 768px)" srcset="img/tablet/mens.jpg">
+                            <img class="cakes__list-item-img" src="img/mens.jpg" width="484" height="305" alt="Торт, украшеный шоколадом и шоколадным соусом">
+                        </picture>
+                        <svg class="right-arrow-icon" width="24" height="16">
+                            <use xlink:href="img/symbols.svg#arrow-right"/></svg></a>
+                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-womans.html" aria-label="Все торты для женщин">
                         <h3 class="cakes__list-item-title">Женщинам
-                            <p class="cakes__list-item-subtitle" href="cakes-womans.html">16 видов</p></h3>
-                        <img class="cakes__list-item-img" src="img/womans.jpg" width="484" height="305" alt="Торт, покрытый белой мастикой и украшеный розами">
-                        <a class="cakes__list-item-look" href="cakes-classic.html" aria-label="Смотреть все муссовые торты">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="24" height="16">
-                                <use xlink:href="#arrow-right">
-                            </svg></a>
-                    </div></li>
-                <li class="cakes__list-item  cakes__list-item--big">
-                    <h3 class="cakes__list-item-title">Детские
-                        <p class="cakes__list-item-subtitle" href="cakes-children.html">18 видов</p></h3>
-                    <img class="cakes__list-item-img" src="img/childrens.jpg" width="695" height="652" alt="Детский торт, украшеный леденцами и конфетами из мастики">
-                    <a class="cakes__list-item-look" href="cakes-classic.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49" width="25" height="16">
-                            <use xlink:href="#arrow-right">
-                        </svg></a></li>
+                            <span class="cakes__list-item-subtitle">16 видов</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/womans.jpg">
+                            <source media="(max-width: 768px)" srcset="img/tablet/womans.jpg">
+                            <img class="cakes__list-item-img" src="img/womans.jpg" width="484" height="305" alt="Торт, покрытый белой мастикой и украшеный розами">
+                        </picture>
+                        <svg class="right-arrow-icon" width="24" height="16">
+                            <use xlink:href="img/symbols.svg#arrow-right"/></svg>
+                    </a></li>
+                <li>
+                    <a class="cakes__list-item  cakes__list-item--big"  href="cakes-children.html" aria-label="Все торты для детей">
+                        <h3 class="cakes__list-item-title">Детские
+                            <span class="cakes__list-item-subtitle">18 видов</span></h3>
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="img/mobile/childrens.jpg"> 
+                            <source media="(max-width: 768px)" srcset="img/tablet/childrens.jpg">  
+                            <img class="cakes__list-item-img" src="img/childrens.jpg" width="695" height="652" alt="Детский торт, украшеный леденцами и конфетами из мастики">
+                        </picture>
+                        <svg class="right-arrow-icon" width="24" height="16">
+                            <use xlink:href="img/symbols.svg#arrow-right"/></svg>
+                    </a></li>
             </ul>
         </section>
         <section class="individual-order  centering-wrap" id="individualOrd">
@@ -103,7 +117,10 @@
                     <div class="select-fill__slider-wrap  slider__wrap">
                         <ul class="select-fill__fills-list  slider__list">
                             <li class="select-fill__fills-item  slider__item">
-                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
+                                <picture>
+                                    <source media="(max-width: 768px)"srcset="img/tablet/chocolate-fill.jpg">
+                                    <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390" alt="">
+                                </picture>
                                 <div class="select-fill__fills-text-wrap">
                                     <h4 class="select-fill__fills-title">Шоколадный ганаш</h4>
                                     <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
@@ -111,7 +128,7 @@
                                     <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
                                 </div></li>
                             <li class="select-fill__fills-item  slider__item  hidden">
-                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390">
+                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390" alt="">
                                 <div class="select-fill__fills-text-wrap">
                                     <h4 class="select-fill__fills-title">Шоколадный ганаш</h4>
                                     <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
@@ -133,19 +150,19 @@
                     <h3 class="individual-order__steps-title  select-size__title" data-number="02">Размер</h3>
                     <ul class="select-size__sizes-list">
                         <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img" src="img/circle-1kg.png" width="110" height="110">
+                            <img class="select-size__sizes-img" src="img/circle-1kg.png" width="110" height="110" alt="">
                             <p class="select-size__sizes-signification">17-18 см</p>
                             <p class="select-size__sizes-signification">(1 кг – 6 персон)</p></li>
                         <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img" src="img/circle-2kg.png" width="154" height="154">
+                            <img class="select-size__sizes-img" src="img/circle-2kg.png" width="154" height="154" alt="">
                             <p class="select-size__sizes-signification">23-24 см</p>
                             <p class="select-size__sizes-signification">(10 – 12 персон)</p></li>
                         <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img" src="img/circle-5kg.png" width="173" height="174">
+                            <img class="select-size__sizes-img" src="img/circle-5kg.png" width="173" height="174" alt="">
                             <p class="select-size__sizes-signification">Два яруса 25 и 20 см</p>
                             <p class="select-size__sizes-signification">(15–20 персон)</p></li>
                         <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img" src="img/circle-8kg.png" width="200" height="202">
+                            <img class="select-size__sizes-img" src="img/circle-8kg.png" width="200" height="202" alt="">
                             <p class="select-size__sizes-signification">Три яруса 30,25 и 18 см</p>
                             <p class="select-size__sizes-signification">(25–30 персон)</p></li>
                     </ul>
@@ -155,11 +172,11 @@
                     <div class="select-decoration__slider-wrap  slider__wrap">
                         <ul class="select-decoration__decoration-list  slider__list">
                             <li class="select-decoration__decoration-item  slider__item">
-                                <img class="select-decoration__decoration-img" src="img/cake-1.jpg" width="288" height="232">
+                                <img class="select-decoration__decoration-img" src="img/cake-1.jpg" width="288" height="232" alt="">
                                 <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
                                 <p class="select-decoration__decoration-price">700 руб/кг</p></li>
                             <li class="select-decoration__decoration-item  slider__item">
-                                <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214">
+                                <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214" alt="">
                                 <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
                                 <p class="select-decoration__decoration-price">600 руб/кг</p></li>
                         </ul>
@@ -194,23 +211,23 @@
                 </li>
             </ol>
         </section>
-        <section class="reviews" id="section-reviews">
+        <section class="reviews  centering-wrap" id="section-reviews">
             <h2 class="reviews__title  section-title">Отзывы</h2>
             <div class="reviews__slider-wrap  slider__wrap">
                 <ul class="reviews__list  slider__list">
                     <li class="reviews__item  slider__item">
-                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209">
+                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209" alt="">
                         <blockquote class="reviews__comment-wrap">
                             <cite class="reviews__comment-author">Мария
-                                <p class="reviews__comment-author-info">юрист, 33 года</p></cite>
+                                <span class="reviews__comment-author-info">юрист, 33 года</span></cite>
                             <span class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)</span>
                             <span class="reviews__unwrap-comment">Развернуть</span>
                         </blockquote></li>
                     <li class="reviews__item  slider__item">
-                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209">
+                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209" alt="">
                         <blockquote class="reviews__comment">
                             <cite class="reviews__comment-author">Мария
-                                <p class="reviews__comment-author-info">юрист, 33 года</p></cite>
+                                <span class="reviews__comment-author-info">юрист, 33 года</span></cite>
                             <span class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)</span>
                             <span class="reviews__unwrap-comment">Развернуть</span>
                         </blockquote></li>
@@ -241,7 +258,7 @@
                         <use xlink:href="img/symbols.svg#insta"></use>
                     </svg></a>
                     <a class="about-us__social-item  about-us__social-item--vk    social__item  social-link  social-link--vk" href="#"><span class="visually-hidden">страница Торты на заказ во вконтакте</span>
-                    <svg width="25" height="17" class="vk-icon">
+                    <svg width="30" height="20.4" class="vk-icon">
                         <use xlink:href="img/symbols.svg#vk"></use>
                     </svg></a>
                     <a class="about-us__social-item  about-us__social-item--twit  social__item  social-link  social-link--twit" href="#"><span class="visually-hidden">страница Торты на заказ в твиттер</span></a>
@@ -326,8 +343,7 @@
             </div>
         </section>
         <footer class="main-footer">
-            <div class="centering-wrap">
-                <div class="main-footer__nav  main-nav">
+            <div class="main-footer__centering-wrap">
                 <a class="main-footer__logo  main-nav__logo">Cakes</a>
                 <ul class="main-footer__menu  main-nav__menu">
                     <li><a class="main-footer__menu-link  main-nav__menu-link" href="#section-cakes">Наши торты</a></li>
@@ -337,21 +353,23 @@
                     <li><a class="main-footer__menu-link  main-nav__menu-link" href="#section-order-how">Как заказать</a></li>
                     <li><a class="main-footer__menu-link  main-nav__menu-link" href="#section-contacts">Контакты</a></li>
                 </ul>
-                </div> 
                 <section class="main-footer__social">
                     <h2 class="visually-hidden">Мы в соц.сетях:</h2>
-                    <a class="main-footer__social-item  main-footer__social-item--insta  social-link  social-link--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
+                    <a class="main-footer__social-item  main-footer__social-item--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
                     <svg width="23" height="23">
-                      <use xlink:href="img/symbols.svg#inst"></use>
+                      <use xlink:href="img/symbols.svg#insta"></use>
                     </svg>
                     </a>
-                    <a class="main-footer__social-item  main-footer__social-item--vk  social-link  social-link--vk" href="#"><span class="visually-hidden">страница Торты на заказ во вконтакте</span></a>
+                    <a class="main-footer__social-item  main-footer__social-item--vk" href="#"><span class="visually-hidden">страница Торты на заказ во вконтакте</span>
+                    <svg width="31" height="30" class="vk-icon">
+                        <use xlink:href="img/symbols.svg#vk"></use>
+                    </svg></a>
                 </section> 
             </div>  
-            <p class="main-footer__copyrights  centering-wrap">©  2018 Cakes</p> 
+            <p class="main-footer__copyright  centering-wrap">©  2018 Cakes</p> 
         </footer>
     </main>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
