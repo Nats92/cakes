@@ -6,17 +6,37 @@
     background-image: url("../img/decoration.png");
     background-repeat: no-repeat;
     background-position: 17px 197px;
+
+    @media @tablet-width {
+        padding-right: 8px;
+        padding-top: 41px;
+        padding-bottom: 45px;
+        padding-left: 45px;
+        background-size: 119px 157px;
+        background-position: 4px 124px;
+    }
 }
 .select-decoration__title {
     top: 33px;
     left: 80px;
     padding-top: 88px;
+
+    @media @tablet-width {
+        top: 44px;
+        left: 45px;
+    }
 }
 .select-decoration__slider-wrap {
     max-width: 885px;
     margin-left: auto;
     margin-bottom: 45px;
     padding: 0;
+
+    @media @tablet-width {
+        max-width: 552px;
+        margin-right: 18px;
+        margin-bottom: 28px;
+    }
 }
 .select-decoration__decoration-list {
     display: flex;
@@ -26,6 +46,11 @@
     padding: 0 15px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    @media @tablet-width {
+        max-width: 552px;
+        padding: 0 64px;
+    }
 }
 .select-decoration__decoration-item {
     display: flex;
@@ -41,6 +66,12 @@
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, .05);
 
     text-align: center;
+
+    @media @tablet-width {
+        width: 195px;
+        min-height: 262px;
+        padding: 18px 0 17px;
+    }
 }
     .select-decoration__decoration-item:hover,
     .select-decoration__decoration-item:focus {
@@ -48,6 +79,11 @@
     }
 .select-decoration__decoration-img {
     margin-bottom: 36px;
+
+    @media @tablet-width {
+        width: 175px;
+        margin-bottom: 5px;
+    }
 }
 .select-decoration__decoration-name {
     margin: 0;
@@ -58,6 +94,11 @@
     font-weight: 400;
     font-style: normal;
     color: #2f2f2f;
+
+    @media @tablet-width {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 .select-decoration__decoration-price {
     margin: 0;
@@ -67,10 +108,19 @@
     line-height: 25px;
     font-weight: 700;
     font-style: normal;
+
+    @media @tablet-width {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 .select-decoration__slider-controls-wrap {
     padding: 0 20px;
     box-sizing: border-box;
+
+    @media @tablet-width {
+        padding: 0;
+    }
 }
 .select-decoration__slider-counter {
     bottom: -10px;

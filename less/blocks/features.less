@@ -5,6 +5,11 @@
     background-image: url("../img/features-berries-illustr.png");
     background-repeat: no-repeat;
     background-position: top left;
+
+    @media @tablet-width {
+        background-image: url("../img/tablet/features-berries-illustr.png");
+        background-position: 0 10px;
+    }
 }
 .features__title {
     padding: 12px 0;
@@ -12,11 +17,19 @@
 
     text-align: center;
     letter-spacing: 0;
+
+    @media @tablet-width {
+        padding: 0;
+    }
 }
 .features__subtitle {
     margin-bottom: 128px;
 
     text-align: center;
+
+    @media @tablet-width {
+        margin-bottom: 60px;
+    }
 }
 .features__list {    
     max-width: 458px;
@@ -25,34 +38,72 @@
     margin-right: 290px;
     padding: 0;
     list-style: none;
+
+    @media @tablet-width {
+        max-width: 342px;
+        margin-right: 66px;
+    }
 }
 .features__item {
     position: relative;
     padding-left: 83px;
+    margin-bottom: 33px;
+
+    @media @tablet-width {
+        margin-bottom: 16px;
+    }
+
+    &--natural-ingredients {
+        padding-left: 78px;
+    }
 
     &--natural-ingredients::before {
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translateY(-30px);
+        transform: translateY(-50%);
 
         width: 61px;
         height: 61px;
         content: "";
         background-image: url("../img/natural-icon.png");
+        background-repeat: no-repeat;
         background-size: contain;
+
+        @media @tablet-width {
+            left: 10px;
+
+            width: 48px;
+            height: 48px;
+            background-image: url("../img/tablet/natural-icon.png");
+        }
     }
+
+    &--fresh-cake {
+        width: 324px;
+        padding-left: 78px;
+        box-sizing: border-box;
+    }
+
     &--fresh-cake::before {
         position: absolute;
         top: 50%;
-        left: 3px;
-        transform: translateY(-27px);
+        left: 0;
+        transform: translateY(-50%);
 
         width: 55px;
         height: 54px;
         content: "";
-        background-image: url("../img/delivery-icon.png");
+        background-image: url("../img/cake-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: contain;
+
+        @media @tablet-width {
+            width: 63px;
+            height: 38px;
+            background-image: url("../img/tablet/cake-icon.png");
+        }
     }
 }
 .features__item-title {
@@ -65,10 +116,16 @@
     font-size: 20px;
     line-height: 27px;
     color: #000;
+
+    @media @tablet-width {
+        margin-bottom: 9px;
+
+        font-size: 15px;
+        line-height: 15px;
+    }
 }
 .features__item-text {
     margin: 0;
-    margin-bottom: 33px;
 
     font-family: @circe;
     font-weight: 400;
@@ -76,5 +133,10 @@
     font-size: 20px;
     line-height: 24px;
     color: #000;
+
+    @media @tablet-width {
+        font-size: 14px;
+        line-height: 14px;
+    }
 }
 

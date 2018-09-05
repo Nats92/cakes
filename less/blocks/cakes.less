@@ -7,6 +7,7 @@
     @media @tablet-width {
         margin-top: 0;
         margin-bottom: 35px;
+        padding: 0px 20px;
     }
     @media @mobile-width {
     }
@@ -86,6 +87,20 @@
         }
     }
 
+    &--men .cakes__item-title,
+    &--women .cakes__item-title {
+        @media @tablet-width {
+            top: 30px;
+        }
+    }
+
+    &--children .cakes__item-title {
+        @media @tablet-width {
+            top: 30px;
+            left: 30px;
+        }
+    }
+
     &:hover,
     &:focus {
         box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .13);
@@ -126,7 +141,7 @@
     }
 }
 
-.cakes__list-item-title {
+.cakes__item-title {
     position: absolute;
     left: 46px;
     top: 34px;

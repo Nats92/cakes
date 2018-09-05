@@ -5,16 +5,36 @@
     align-items: flex-start;
 
     margin-bottom: 112px;
+
+    @media @tablet-width {
+        margin-bottom: 63px;
+        padding: 0 46px;
+    }
 }
 .about-us__title {
-    line-height: 86px;
+    line-height: 90px;
+
+    &.section-title {
+        @media @tablet-width {
+            line-height: 45px;
+        }
+    }
 }
 .about-us__subtitle {
-    margin-bottom: 3px;
+    @media @tablet-width {
+        margin-bottom: 5px;
+        text-align: left;
+    }
 }
 .about-us__text-wrap {
     max-width: 555px;
     margin-right: 84px;
+
+    @media @tablet-width {
+        max-width: 328px;
+        max-height: 312px;
+        margin-right: 35px;
+    }
 }
 .about-us__slogan {
     margin: 0;
@@ -25,6 +45,13 @@
     font-style: normal;
     font-size: 20px;
     line-height: 27px;
+
+    @media @tablet-width {
+        margin-bottom: 6px;
+
+        font-size: 15px;
+        line-height: 17px;
+    }
 }
 .about-us__slogan-interpretation {
     margin: 0;
@@ -38,11 +65,29 @@
 
     &:last-of-type {
         margin-bottom: 20px;
+
+        @media @tablet-width {
+            max-width: 275px;
+            max-height: 31px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+    }
+
+    @media @tablet-width {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 .about-us__baker-photo {
     border-radius: 50%;
-    margin-bottom: 112px;
+    margin-bottom: 104px;
+
+    @media @tablet-width {
+        margin-bottom: 27px;
+    }
 }
 .about-us__social {
     display: flex;
@@ -74,15 +119,23 @@
 .about-us__bakers-quote {
     width: 100%;
     padding-top: 70px;
+    padding-bottom: 120px;
     margin: 0;
-    background-image: url("../img/quotes.png");
-    background-repeat: no-repeat;
-    background-position: center top;
+    background-image: url("../img/quotes.png"),
+    url("../img/baker-sighnification.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+
+    @media @tablet-width {
+        padding-top: 37px;
+        padding-bottom: 65px;
+        background-image: url("../img/tablet/quotes.png"),
+        url("../img/tablet/baker-sighnification.png");
+    }
 }
 .about-us__bakers-quote-text {
     max-width: 616px;
     margin: 0 auto;
-    margin-bottom: 44px;
 
     font-family: @playFair;
     font-weight: 700;
@@ -90,6 +143,13 @@
     font-size: 25px;
     line-height: 38px;
     text-align: center;
+
+    @media @tablet-width {
+        max-width: 346px;
+
+        font-size: 14px;
+        line-height: 21px;
+    }
 }
 .about-us__backers-sighnification {
     display: block;

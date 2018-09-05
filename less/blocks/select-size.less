@@ -1,3 +1,9 @@
+.select-size {
+    @media @tablet-width {
+        margin-bottom: 21px;
+        padding: 27px 44px 30px;
+    }
+}
 .select-size__sizes-list {
     display: flex;
     flex-wrap: nowrap;
@@ -12,6 +18,11 @@
     box-sizing: border-box;
 
     list-style: none;
+
+    @media @tablet-width {
+        max-width: 583px;
+        padding: 48px 0 42px;
+    }
 }
 .select-size__sizes-item {
     font-family: @circe;
@@ -21,19 +32,85 @@
     font-style: normal;
     color: rgba(47, 47, 47, .8);
 }
+.select-size__title {
+
+    @media @tablet-width {
+        top: 43px;
+        padding-top: 25px;
+
+        font-size: 18px;
+        line-height: 31px;
+        }
+}
 .select-size__sizes-img {
+    display: block;
     margin-bottom: 4px;
     border-radius: 50%;
     padding: 14px;
 
-
     &:hover,
     &:focus {
        box-shadow: 0 6px 16px 0 rgba(103, 12, 40, .14);
+    }
+
+    &--1kg {
+        width: 110px;
+        height: 110px; 
+        
+        @media @tablet-width {
+            width: 77px;
+            height: 77px;
+        }   
+    }
+
+    &--2kg {
+        width: 155px;
+        height: 155px;
+
+        @media @tablet-width {
+            width: 108px;
+            height: 108px;
+        }
+    }
+
+    &--5kg {
+        width: 174px;
+        height: 174px;
+
+        @media @tablet-width {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &--8kg {
+        width: 200px;
+        height: 200px;
+
+        @media @tablet-width {
+            width: 140px;
+            height: 140px;
+        }
+    }
+    @media @tablet-width {
+        padding: 0;
+        margin-bottom: 21px;
+    } 
+
+    @media @mobile-width {
+        width: 109px;
+        height: 109px;
     }
 }
     
 .select-size__sizes-signification {
     margin: 0;
     padding-left: 14px;
+
+    @media @tablet-width {
+        padding-left: 0;
+
+        font-size: 12px;
+        line-height: 20px;
+    }
 }

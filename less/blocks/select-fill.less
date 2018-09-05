@@ -1,11 +1,18 @@
+.select-fill {
+    @media @tablet-width {
+        margin-bottom: 21px;
+        padding: 27px 44px 30px;
+    }
+}
 .select-fill__slider-wrap {
     max-width: 900px;
     margin-left: 114px;
     padding: 27px 0;
 
     @media @tablet-width {
-        max-width: 595px;
-        margin-left: 92px;
+        max-width: 592px;
+        margin-left: 44px;
+        padding: 19px 0;
     }
 }
 .select-fill__fills-list {
@@ -22,9 +29,21 @@
     &:nth-child(n + 2) {
         display: none;
     }
+
+    @media @tablet-width {
+        max-width: 423px;
+        padding-top: 8px;
+    }
 }
 .select-fill__fills-img {
+    flex-shrink: 0;
     margin-right: 40px;
+
+    @media @tablet-width {
+        width: 210px;
+        height: 239px;
+        margin-right: 36px;
+    }
 }
 .select-fill__fills-text-wrap {
     display: flex;
@@ -34,6 +53,13 @@
 
     max-width: 312px;
     padding-top: 10px;
+
+    @media @tablet-width {
+        justify-content: flex-start;
+
+        max-width: 200px;
+        padding-top: 19px;
+    }
 }
 .select-fill__fills-title {
     margin: 0;
@@ -41,7 +67,11 @@
     font-family: @circe;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 700;
+
+    @media @tablet-width {
+        font-size: 18px;
+    }
 }
 .select-fill__fills-descr {
     margin: 0;
@@ -51,20 +81,45 @@
     line-height: 24px;
     font-weight: 400;
     font-style: normal;
+
+    @media @tablet-width {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 .select-fill__fills-btn {
     min-width: 178px;
     margin-left: 5px;
+
+    @media @tablet-width {
+        min-width: 135px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left: 3px;
+
+        font-size: 10px;
+    }
 }
 .select-fill__fills-price {
     margin-bottom: 50px;
 
     font-family: @playFair;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 26px;
+
+    @media @tablet-width {
+        margin-bottom: 23px;
+    }
 }
 .select-fill__slider-counter {
     bottom: 18px;
     right: 4px;
+
+    @media @tablet-width {
+        bottom: 20px;
+        right: 22px;
+    }
 }
     

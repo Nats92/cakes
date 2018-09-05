@@ -21,8 +21,8 @@
     border: 0;
     background-color: transparent;
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-size: 9px 16px;
+    background-position: center;
     cursor: pointer;
 
     &--right {
@@ -42,6 +42,18 @@
         &:hover,
         &:focus {
             background-image: url("../img/arrow-left-hover.png");
+        }
+    }
+
+    @media @tablet-width {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
         }
     }
 }
@@ -80,5 +92,10 @@
 
             content: "/";
         }
+    }
+
+    @media @tablet-width {
+        font-size: 11px;
+        line-height: 15px;
     }
 }
