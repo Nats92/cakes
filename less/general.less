@@ -2,6 +2,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -12,11 +13,11 @@ body {
     font-style: normal;
     color: @main-text-color;
 }
+
 .centering-wrap {
     max-width: @max-desktop-width;
     padding: 0 75px 0 73px;
     margin: 0 auto;
-
     box-sizing: border-box;
 
     @media @tablet-width {
@@ -26,9 +27,11 @@ body {
     @media @mobile-width {
     }
 }
+
 .hidden {
     display: none;
 }
+
 .visually-hidden {
     position: absolute;
 
@@ -44,4 +47,38 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.line-break {
+    display: block;
+}
+
+@keyframes smooth-next {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes smooth-prev {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.animation-smooth {
+    &--next {
+        animation-name: smooth-next;
+        animation-duration: 500ms;  
+    }
+
+    &--prev {
+        animation-name: smooth-prev;
+        animation-duration: 500ms; 
+    }
 }

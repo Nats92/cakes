@@ -1,24 +1,50 @@
 .customer-care {
     max-width: 1366px;
-    min-height: 766px;
     margin: 0 auto;
     margin-top: -210px;
-    background-image: url("../img/features-cake-illustr.png");
-    background-repeat: no-repeat;
-    background-position: bottom -36px right 0;
+
+    @media @tablet-width {
+        margin-top: 0;
+    }
 }
 .customer-care__inner-wrap {
     max-width: 447px;
-    padding-left: 72px;
     padding-top: 326px;
+
+    @media @tablet-width {
+        max-width: 310px;
+        padding-left: 46px;
+        padding-top: 0;
+    }
+
+    @media @mobile-width {
+        padding: 0 48px 0 19px;
+    }
 }
 .customer-care__title {
     margin-bottom: 6px;
 
     letter-spacing: 0;
+
+    @media @tablet-width {
+        margin-bottom: 0;
+    }
+
+    @media @mobile-width {
+        text-align: left;
+    }
 }
 .customer-care__subtitle {
     margin-bottom: 8px;
+
+    @media @tablet-width {
+        line-height: 26px;
+        text-align: left; 
+    }
+
+    @media @mobile-width {
+        margin-bottom: 0;
+    }
 }
 .customer-care__text {
     margin: 0;
@@ -30,4 +56,9 @@
     font-size: 20px;
     line-height: 24px;
     color: #000;
+
+    @media @tablet-width {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }

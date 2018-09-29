@@ -12,15 +12,35 @@
         font-size: 18px;
         line-height: 35px;
     }
+
+    @media @mobile-width {
+        padding-left: 4px;
+        margin-bottom: 8px;
+
+        font-size: 22px;
+    }
 }
+
 .order__form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
 }
+
 .order__form-field-wrap {
     margin: 0;
     margin-right: 82px;
+    margin-bottom: 10px;
+
+    @media @tablet-width {
+        margin-right: 21px;
+    }
+    
+    @media @mobile-width {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
 
     &:last-of-type {
         margin-right: 27px;
@@ -28,10 +48,11 @@
         @media @tablet-width {
             margin-right: 41px;
         }
-    }
 
-    @media @tablet-width {
-        margin-right: 21px;
+        @media @mobile-width {
+            margin-right: 0;
+            margin-bottom: 28px;
+        }
     }
 }
 .order__form-label {
@@ -51,6 +72,14 @@
         font-size: 18px;
         line-height: 19px;
     }
+
+    @media @mobile-width {
+        width: 96%;
+        margin-bottom: 9px;
+
+        font-size: 20px;
+        text-align: center;
+    }
 }
 .order__form-field {
     border: 0;
@@ -64,12 +93,32 @@
     font-style: normal;
     color: @main-text-color;
 
+    @media @tablet-width {
+        padding: 0 27px;
+        border: 1px solid #dddddd;
+        border-radius: 15px;
+        box-sizing: border-box;
+
+        font-size: 12px;
+        text-align: center;
+    }
+
+    @media @mobile-width {
+        width: 95%;
+
+        font-size: 14px;
+        line-height: 30px;
+    }
 
     &--fill {
         width: 250px;
 
         @media @tablet-width {
             width: 160px;
+        }
+
+        @media @mobile-width {
+            margin-top: -4px;
         }
     }
 
@@ -88,19 +137,10 @@
             width: 160px;
         }
     }
-
-    @media @tablet-width {
-        padding: 0 27px;
-        border: 1px solid #dddddd;
-        border-radius: 15px;
-        box-sizing: border-box;
-
-        font-size: 12px;
-        text-align: center;
-    }
 }
 .order__form-submit {
     min-width: 226px;
+    margin-bottom: 10px;
 
     @media @tablet-width {
         min-width: 160px;
@@ -108,5 +148,13 @@
 
         font-size: 10px;
         line-height: 22px;
+    }
+
+    @media @mobile-width {
+        min-width: 226px;
+        margin: 0 auto;
+        padding: 15px 0;
+
+        font-size: 13px;
     }
 }

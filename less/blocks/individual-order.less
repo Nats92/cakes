@@ -1,6 +1,11 @@
 .individual-order__title {
     text-align: center;
+
+    @media @mobile-width {
+        line-height: 28px;
+    }
 }
+
 .individual-order__subtitle {
     margin-bottom: 48px;
     padding-right: 10px;
@@ -10,65 +15,90 @@
     @media @tablet-width {
         margin-bottom: 30px;
     }
+
+    @media @mobile-width {
+        margin-bottom: 13px;
+
+        line-height: 40px;
+    }
 }
+
 .individual-order__steps-list {
     margin: 0;
     padding: 0;
 
     list-style: none;   
 }
+
 .individual-order__steps-item {
     position: relative;
 
     margin-bottom: 35px;
-    padding: 60px 80px;
-    padding-bottom: 66px;
+    padding: 52px 80px 58px;
     background-color: #fff;
     box-shadow: 0 5px 13px 0 rgba(163, 6, 60, .1);
+
+    @media @mobile-width {
+        padding: 0 19px 21px;
+    }
 }
+
 .individual-order__steps-title {
     position: absolute;
-    top: 40px;
 
     max-width: 200px;
-    padding-top: 80px;
     margin: 0;
 
     font-family: @playFair;
     font-size: 27px;
-    line-height: 29px;
+    line-height: 40px;
     color: @pink-color;
     letter-spacing: 0.27px;
 
     @media @tablet-width {
         width: 112px;
-        padding-top: 28px;
 
         font-size: 18px;
         line-height: 23px;
     }
 
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
+    @media @mobile-width {
+        width: auto;
 
-        content: attr(data-number);
-        font-family: @playFair;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 90px;
-        color: inherit;
-        letter-spacing: 0.61px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
 
-        @media @tablet-width {
-            font-size: 36px;
-            line-height: 20px;
-        }
+.individual-order__title-number {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-family: @playFair;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 66px;
+    color: inherit;
+    letter-spacing: 0.61px;
+
+    @media @tablet-width {
+        margin-bottom: 0;
+
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    @media @mobile-width {
+        display: inline;
+        margin-right: 5px;
+
+        font-size: 30px;
     }
 }
 
 
+
+    
 
 
 

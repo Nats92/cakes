@@ -1,7 +1,9 @@
 .about-us {
+    position: relative;
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 
     margin-bottom: 112px;
@@ -10,32 +12,61 @@
         margin-bottom: 63px;
         padding: 0 46px;
     }
-}
-.about-us__title {
-    line-height: 90px;
 
-    &.section-title {
-        @media @tablet-width {
-            line-height: 45px;
-        }
+    @media @mobile-width {
+        padding: 0 15px 0 20px;
+        margin-bottom: 37px;
     }
 }
+
+.about-us__title {
+    width: 100%;
+    line-height: 90px;
+}
+
+.about-us__title.section-title {
+    @media @tablet-width {
+            line-height: 45px;
+    }
+
+    @media @mobile-width {
+        position: absolute;
+        top: 0;
+        line-height: 45px;
+        width: 88%;
+    }
+}
+
 .about-us__subtitle {
     @media @tablet-width {
         margin-bottom: 5px;
         text-align: left;
     }
+
+    @media @mobile-width {
+        margin-bottom: 3px;
+    }
 }
+
 .about-us__text-wrap {
     max-width: 555px;
-    margin-right: 84px;
+    margin-bottom: 191px;
 
     @media @tablet-width {
         max-width: 328px;
         max-height: 312px;
         margin-right: 35px;
+        margin-bottom: 42px;
+    }
+
+    @media @mobile-width {
+        order: 1;
+
+        margin: 0;
+        margin-bottom: 30px;
     }
 }
+
 .about-us__slogan {
     margin: 0;
     margin-bottom: 5px;
@@ -53,6 +84,7 @@
         line-height: 17px;
     }
 }
+
 .about-us__slogan-interpretation {
     margin: 0;
     margin-bottom: 15px;
@@ -63,6 +95,17 @@
     font-size: 18px;
     line-height: 24px;
 
+    @media @tablet-width {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    @media @mobile-width {
+        margin-bottom: 16px;
+    }
+
     &:last-of-type {
         margin-bottom: 20px;
 
@@ -72,33 +115,69 @@
             margin-bottom: 15px;
             overflow: hidden;
         }
-    }
 
-    @media @tablet-width {
-        margin-bottom: 10px;
-
-        font-size: 14px;
-        line-height: 17px;
+        @media @mobile-width {
+            max-height: 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
     }
 }
+
+.about-us__bakers-photo-wrap {
+    margin: 0 auto;
+
+    @media @mobile-width {
+        display: flex;
+        align-items: flex-start;
+
+        width: 100%;
+        padding-top: 59px; 
+    }
+   
+}
+
 .about-us__baker-photo {
     border-radius: 50%;
-    margin-bottom: 104px;
 
-    @media @tablet-width {
-        margin-bottom: 27px;
+    @media @mobile-width {
+        width: 155px;
+        height: 155px;
+        margin-right: 35px;
     }
 }
+
 .about-us__social {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    &--after-text {
+        @media @mobile-width {
+            display: none;
+        }
+    }
+
+    &--near-photo {
+        display: none;
+
+        @media @mobile-width {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
+
 .about-us__social-item {
     width: 36px;
     height: 36px;
     background-color: #fff;
     margin-right: 18px;
+
+    @media @mobile-width {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 
     &--insta {
         fill: @pink-color;
@@ -114,8 +193,13 @@
 
     &:last-child {
         margin-right: 0;
+
+        @media @mobile-width {
+            margin-bottom: 0;
+        }
     }
 }
+
 .about-us__bakers-quote {
     width: 100%;
     padding-top: 70px;
@@ -131,6 +215,15 @@
         padding-bottom: 65px;
         background-image: url("../img/tablet/quotes.png"),
         url("../img/tablet/baker-sighnification.png");
+    }
+
+    @media @mobile-width {
+        order: 2;
+
+        padding-top: 30px;
+        padding-bottom: 50px;
+        background-image: url("../img/mobile/quotes.png"),
+        url("../img/mobile/baker-sighnification.png");
     }
 }
 .about-us__bakers-quote-text {
@@ -149,6 +242,11 @@
 
         font-size: 14px;
         line-height: 21px;
+    }
+
+    @media @mobile-width {
+        font-size: 13px;
+        line-height: 16px;
     }
 }
 .about-us__backers-sighnification {
