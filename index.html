@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="ru">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Торты на заказ</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/svgxuse.min.js" async></script>
 </head>
 <body class="main-page">
     <header class="main-header  centering-wrap">
@@ -39,86 +38,91 @@
         <section class="cakes  centering-wrap" id="section-cakes">
             <h2 class="cakes__title  section-title">Наши торты</h2>
             <ul class="cakes__list">
-                <li>
-                    <a class="cakes__list-item  cakes__list-item--big" href="cakes-classic.html" aria-label="Все классические торты">
-                        <h3 class="cakes__item-title">Классические
-                            <span class="cakes__list-item-subtitle">24 вида</span></h3>
+                <li class="cakes__item  cakes__item--left-big-img">
+                    <a class="cakes__cake-type  cakes__cake-type--big" href="cakes-classic.html" aria-label="Все классические торты">
+                        <h3 class="cakes__cake-type-title">Классические
+                            <span class="cakes__cake-type-subtitle">24 вида</span></h3>
                         <picture>
                             <source media="(max-width: 320px)" srcset="img/mobile/classic.jpg">
                             <source media="(max-width: 768px)" srcset="img/tablet/classic.jpg">
-                            <img class="cakes__list-item-img" src="img/classic.jpg" width="695" height="652" alt="Классический торт, украшеный цветами и фруктами">
+                            <img class="cakes__cake-type-img" src="img/classic.jpg" alt="Классический торт, украшеный цветами и фруктами">
                         </picture>
-                        <p class="cakes__list-item-look-text">Смотреть 
+                        <p class="cakes__cake-type-look-text">Смотреть 
                             <svg class="right-arrow-icon" width="26" height="16"><use xlink:href="img/sprite.svg#arrow-right"/></svg></p>
-                    </a></li>
-                <li class="cakes__list-item-container">
-                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-mousse.html" aria-label="Все муссовые торты">
-                        <h3 class="cakes__item-title">Муссовые
-                            <span class="cakes__list-item-subtitle">12 видов</span></h3>
-                        <picture>
-                            <source media="(max-width: 320px)" srcset="img/mobile/mousse.jpg">
-                            <source media="(max-width: 768px)" srcset="img/tablet/mousse.jpg">
-                            <img class="cakes__list-item-img" src="img/mousse.jpg" width="484" height="305" alt="Муссовый торт, украшеный шоколадной глазурью и апельсинами">
-                        </picture>
-                        <svg class="right-arrow-icon" width="24" height="16">
-                            <use xlink:href="img/sprite.svg#arrow-right"/></svg></a>
-                    <a class="cakes__list-item  cakes__list-item--small" href="cakes-wedding.html" aria-label="Все свадебные торты">
-                        <h3 class="cakes__item-title">Свадебные
-                            <span class="cakes__list-item-subtitle">20 видов</span></h3>
-                        <picture>
-                            <source media="(max-width: 320px)" srcset="img/mobile/wedding.jpg">
-                            <source media="(max-width: 768px)" srcset="img/tablet/wedding.jpg">
-                            <img class="cakes__list-item-img" src="img/wedding.jpg" width="484" height="305" alt="Свадебный трёхъярусный белый торт, украшеный нежно-розовыми цветами из мастики">
-                        </picture>
-                        <svg class="right-arrow-icon" width="24" height="16">
-                            <use xlink:href="img/sprite.svg#arrow-right"/></svg></a></li>
-                <li class="cakes__list-item-container">
-                    <a class="cakes__list-item  cakes__list-item--small  cakes__list-item--men" href="cakes-mens.html" aria-label="Все торты для мужчин">    
-                        <h3 class="cakes__item-title">Мужчинам
-                            <span class="cakes__list-item-subtitle">12 видов</span></h3>
-                        <picture>
-                            <source media="(max-width: 320px)" srcset="img/mobile/mens.jpg">
-                            <source media="(max-width: 768px)" srcset="img/tablet/mens.jpg">
-                            <img class="cakes__list-item-img" src="img/mens.jpg" width="484" height="305" alt="Торт, украшеный шоколадом и шоколадным соусом">
-                        </picture>
-                        <svg class="right-arrow-icon" width="24" height="16">
-                            <use xlink:href="img/sprite.svg#arrow-right"/></svg></a>
-                    <a class="cakes__list-item  cakes__list-item--small  cakes__list-item--women" href="cakes-womans.html" aria-label="Все торты для женщин">
-                        <h3 class="cakes__item-title">Женщинам
-                            <span class="cakes__list-item-subtitle">16 видов</span></h3>
-                        <picture>
-                            <source media="(max-width: 320px)" srcset="img/mobile/womans.jpg">
-                            <source media="(max-width: 768px)" srcset="img/tablet/womans.jpg">
-                            <img class="cakes__list-item-img" src="img/womans.jpg" width="484" height="305" alt="Торт, покрытый белой мастикой и украшеный розами">
-                        </picture>
-                        <svg class="right-arrow-icon" width="24" height="16">
-                            <use xlink:href="img/sprite.svg#arrow-right"/></svg>
-                    </a></li>
-                <li>
-                    <a class="cakes__list-item  cakes__list-item--big  cakes__list-item--children"  href="cakes-children.html" aria-label="Все торты для детей">
-                        <h3 class="cakes__item-title  cakes__item-title--lower">Детские
-                            <span class="cakes__list-item-subtitle">18 видов</span></h3>
+                    </a>
+                    <div class="cakes__cake-type-container">
+                        <a class="cakes__cake-type  cakes__cake-type--small" href="cakes-mousse.html" aria-label="Все муссовые торты">
+                            <h3 class="cakes__cake-type-title">Муссовые
+                                <span class="cakes__cake-type-subtitle">12 видов</span></h3>
+                            <picture>
+                                <source media="(max-width: 320px)" srcset="img/mobile/mousse.jpg">
+                                <source media="(max-width: 768px)" srcset="img/tablet/mousse.jpg">
+                                <img class="cakes__cake-type-img" src="img/mousse.jpg" alt="Муссовый торт, украшеный шоколадной глазурью и апельсинами">
+                            </picture>
+                            <svg class="right-arrow-icon" width="24" height="16">
+                                <use xlink:href="img/sprite.svg#arrow-right"/></svg></a>
+                        <a class="cakes__cake-type  cakes__cake-type--small  cakes__cake-type--wedding" href="cakes-wedding.html" aria-label="Все свадебные торты">
+                            <h3 class="cakes__cake-type-title">Свадебные
+                                <span class="cakes__cake-type-subtitle">20 видов</span></h3>
+                            <picture>
+                                <source media="(max-width: 320px)" srcset="img/mobile/wedding.jpg">
+                                <source media="(max-width: 768px)" srcset="img/tablet/wedding.jpg">
+                                <img class="cakes__cake-type-img" src="img/wedding.jpg" alt="Свадебный трёхъярусный белый торт, украшеный нежно-розовыми цветами из мастики">
+                            </picture>
+                            <svg class="right-arrow-icon" width="24" height="16">
+                                <use xlink:href="img/sprite.svg#arrow-right"/></svg></a>
+                    </div></li>
+                <li class="cakes__item  cakes__item--right-big-img">
+                    <div class="cakes__cake-type-container">
+                        <a class="cakes__cake-type  cakes__cake-type--small  cakes__cake-type--men" href="cakes-mens.html" aria-label="Все торты для мужчин">    
+                            <h3 class="cakes__cake-type-title">Мужчинам
+                                <span class="cakes__cake-type-subtitle">12 видов</span></h3>
+                            <picture>
+                                <source media="(max-width: 320px)" srcset="img/mobile/mens.jpg">
+                                <source media="(max-width: 768px)" srcset="img/tablet/mens.jpg">
+                                <img class="cakes__cake-type-img" src="img/mens.jpg" alt="Торт, украшеный шоколадом и шоколадным соусом">
+                            </picture>
+                            <svg class="right-arrow-icon" width="24" height="16">
+                                <use xlink:href="img/sprite.svg#arrow-right"/></svg></a>
+                        <a class="cakes__cake-type  cakes__cake-type--small  cakes__cake-type--women" href="cakes-womans.html" aria-label="Все торты для женщин">
+                            <h3 class="cakes__cake-type-title">Женщинам
+                                <span class="cakes__cake-type-subtitle">16 видов</span></h3>
+                            <picture>
+                                <source media="(max-width: 320px)" srcset="img/mobile/womans.jpg">
+                                <source media="(max-width: 768px)" srcset="img/tablet/womans.jpg">
+                                <img class="cakes__cake-type-img" src="img/womans.jpg" alt="Торт, покрытый белой мастикой и украшеный розами">
+                            </picture>
+                            <svg class="right-arrow-icon" width="24" height="16">
+                                <use xlink:href="img/sprite.svg#arrow-right"/></svg>
+                        </a>
+                    </div>
+                    <a class="cakes__cake-type  cakes__cake-type--big  cakes__cake-type--children"  href="cakes-children.html" aria-label="Все торты для детей">
+                        <h3 class="cakes__cake-type-title  cakes__cake-type-title--lower">Детские
+                            <span class="cakes__cake-type-subtitle">18 видов</span></h3>
                         <picture>
                             <source media="(max-width: 320px)" srcset="img/mobile/childrens.jpg"> 
                             <source media="(max-width: 768px)" srcset="img/tablet/childrens.jpg">  
-                            <img class="cakes__list-item-img" src="img/childrens.jpg" width="695" height="652" alt="Детский торт, украшеный леденцами и конфетами из мастики">
+                            <img class="cakes__cake-type-img" src="img/childrens.jpg" alt="Детский торт, украшеный леденцами и конфетами из мастики">
                         </picture>
                         <svg class="right-arrow-icon" width="24" height="16">
                             <use xlink:href="img/sprite.svg#arrow-right"/></svg>
                     </a></li>
             </ul>
         </section>
-        <section class="individual-order  centering-wrap" id="individualOrd">
+        <section class="individual-order  centering-wrap" id="section-individualOrd">
             <h2 class="individual-order__title  section-title">Индивидуальный заказ</h2>
             <p class="individual-order__subtitle  section-subtitle">Соберите торт в 3 шага</p>
             <ol class="individual-order__steps-list">
                 <li class="individual-order__steps-item  select-fill">
-                    <h3 class="individual-order__steps-title  select-fill__title" data-number="01">Выберите начинку</h3>
+                    <h3 class="individual-order__steps-title  select-fill__title">
+                        <span class="individual-order__title-number">01</span> 
+                        <span>Выберите начинку</span></h3>
                     <div class="select-fill__slider-wrap  slider__wrap">
                         <ul class="select-fill__fills-list  slider__list">
-                            <li class="select-fill__fills-item  slider__item">
+                            <li class="select-fill__fills-item  select-fill__fills-item--current">
                                 <picture>
-                                    <source media="(max-width: 768px)"srcset="img/tablet/chocolate-fill.jpg">
+                                    <source media="(max-width: 320px)" srcset="img/mobile/chocolate-fill.jpg">
+                                    <source media="(max-width: 768px)" srcset="img/tablet/chocolate-fill.jpg">
                                     <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" alt="">
                                 </picture>
                                 <div class="select-fill__fills-text-wrap">
@@ -127,10 +131,50 @@
                                     <span class="select-fill__fills-price">1000 руб/кг</span>
                                     <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
                                 </div></li>
-                            <li class="select-fill__fills-item  slider__item  hidden">
-                                <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" width="343" height="390" alt="">
+                            <li class="select-fill__fills-item">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/mobile/chocolate-fill.jpg">
+                                    <source media="(max-width: 768px)" srcset="img/tablet/chocolate-fill.jpg">
+                                    <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" alt="">
+                                </picture>
                                 <div class="select-fill__fills-text-wrap">
-                                    <h4 class="select-fill__fills-title">Шоколадный ганаш</h4>
+                                    <h4 class="select-fill__fills-title">Шоколадный</h4>
+                                    <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                                    <span class="select-fill__fills-price">1000 руб/кг</span>
+                                    <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
+                                </div></li>
+                            <li class="select-fill__fills-item">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/mobile/chocolate-fill.jpg">
+                                    <source media="(max-width: 768px)" srcset="img/tablet/chocolate-fill.jpg">
+                                    <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" alt="">
+                                </picture>
+                                <div class="select-fill__fills-text-wrap">
+                                    <h4 class="select-fill__fills-title">Milk</h4>
+                                    <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                                    <span class="select-fill__fills-price">1000 руб/кг</span>
+                                    <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
+                                </div></li>
+                            <li class="select-fill__fills-item">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/mobile/chocolate-fill.jpg">
+                                    <source media="(max-width: 768px)" srcset="img/tablet/chocolate-fill.jpg">
+                                    <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" alt="">
+                                </picture>
+                                <div class="select-fill__fills-text-wrap">
+                                    <h4 class="select-fill__fills-title">Orange</h4>
+                                    <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                                    <span class="select-fill__fills-price">1000 руб/кг</span>
+                                    <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
+                                </div></li>
+                            <li class="select-fill__fills-item">
+                                <picture>
+                                    <source media="(max-width: 320px)" srcset="img/mobile/chocolate-fill.jpg">
+                                    <source media="(max-width: 768px)" srcset="img/tablet/chocolate-fill.jpg">
+                                    <img class="select-fill__fills-img" src="img/chocolate-fill.jpg" alt="">
+                                </picture>
+                                <div class="select-fill__fills-text-wrap">
+                                    <h4 class="select-fill__fills-title">Blue</h4>
                                     <p class="select-fill__fills-descr">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
                                     <span class="select-fill__fills-price">1000 руб/кг</span>
                                     <button class="select-fill__fills-btn  page-btn" type="button">Выбрать</button>
@@ -140,6 +184,13 @@
                             <button class="select-fill__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
                             <button class="select-fill__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
                         </div>
+                        <div class="select-fill__round-controls-wrap  slider__round-controls-wrap">
+                            <button class="slider__round-control  slider__round-control--current" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                            <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                            <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                            <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                            <button class="slider__round-control  slider__round-control--etc" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                        </div>
                         <div class="select-fill__slider-counter  slider__counter-wrap">
                             <span class="slider__counter slider__counter--current">1</span>
                             <span class="slider__counter slider__counter--amount">12</span>
@@ -147,45 +198,96 @@
                     </div>
                 </li>
                 <li class="individual-order__steps-item  select-size">
-                    <h3 class="individual-order__steps-title  select-size__title" data-number="02">Размер</h3>
+                    <h3 class="individual-order__steps-title  select-size__title">
+                        <span class="individual-order__title-number">02</span> 
+                        <span class="line-break">Размер</span></h3>
                     <ul class="select-size__sizes-list">
-                        <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img  select-size__sizes-img--1kg" src="img/circle-1kg.png" alt="">
+                        <li class="select-size__sizes-item  select-size__sizes-item--current  slider__item">
+                            <div class="select-size__img-wrap">
+                                <img class="select-size__sizes-img  select-size__sizes-img--1kg" src="img/circle-1kg.png" alt=""></div>
                             <p class="select-size__sizes-signification">17-18 см</p>
                             <p class="select-size__sizes-signification">(1 кг – 6 персон)</p></li>
-                        <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img  select-size__sizes-img--2kg" src="img/circle-2kg.png" alt="">
+                        <li class="select-size__sizes-item  slider__item">
+                            <div class="select-size__img-wrap">
+                                <img class="select-size__sizes-img  select-size__sizes-img--2kg" src="img/circle-2kg.png" alt=""></div>
                             <p class="select-size__sizes-signification">23-24 см</p>
                             <p class="select-size__sizes-signification">(10 – 12 персон)</p></li>
-                        <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img  select-size__sizes-img--5kg" src="img/circle-5kg.png" alt="">
+                        <li class="select-size__sizes-item  slider__item">
+                            <div class="select-size__img-wrap">
+                                <img class="select-size__sizes-img  select-size__sizes-img--5kg" src="img/circle-5kg.png" alt=""></div>
                             <p class="select-size__sizes-signification">Два яруса 25 и 20 см</p>
                             <p class="select-size__sizes-signification">(15–20 персон)</p></li>
-                        <li class="select-size__sizes-item">
-                            <img class="select-size__sizes-img  select-size__sizes-img--8kg" src="img/circle-8kg.png" alt="">
+                        <li class="select-size__sizes-item  slider__item">
+                            <div class="select-size__img-wrap">
+                                <img class="select-size__sizes-img  select-size__sizes-img--8kg" src="img/circle-8kg.png" alt=""></div>
                             <p class="select-size__sizes-signification">Три яруса 30,25 и 18 см</p>
                             <p class="select-size__sizes-signification">(25–30 персон)</p></li>
                     </ul>
+                    <div class="select-size__round-controls-wrap  slider__round-controls-wrap">
+                        <button class="slider__round-control  slider__round-control--current" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                        <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                        <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                        <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                    </div>
+                    <button class="select-size__btn  page-btn" type="button">Выбрать</button>
                 </li>
                 <li class="individual-order__steps-item  select-decoration">
-                    <h3 class="individual-order__steps-title  select-decoration__title" data-number="03">Оформление</h3>
+                    <h3 class="individual-order__steps-title  select-decoration__title">
+                        <span class="individual-order__title-number">03</span> Оформление</h3>
                     <div class="select-decoration__slider-wrap  slider__wrap">
-                        <ul class="select-decoration__decoration-list  slider__list">
-                            <li class="select-decoration__decoration-item  slider__item">  
-                                <picture>
-                                    <source media="(max-width: 768px)" srcset="img/tablet/cake-1.jpg">
-                                    <img class="select-decoration__decoration-img" src="img/cake-1.jpg"alt="">                            
-                                </picture>
-                                <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
-                                <p class="select-decoration__decoration-price">700 руб/кг</p></li>
-                            <li class="select-decoration__decoration-item  slider__item">
-                                <picture>
-                                    <source media="(max-width: 768px)" srcset="img/tablet/cake-2.jpg">
-                                    <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214" alt="">
-                                </picture>
-                                <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
-                                <p class="select-decoration__decoration-price">600 руб/кг</p></li>
-                        </ul>
+                        <div class="select-decoration__slide-list-wrap">
+                            <ul class="select-decoration__decoration-list  slider__list">
+                                <li class="select-decoration__decoration-item  select-decoration__decoration-item--current  slider-item">  
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-1.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-1.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-1.jpg" alt="">                            
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
+                                    <p class="select-decoration__decoration-price">700 руб/кг</p></li>
+                                <li class="select-decoration__decoration-item  slider-item">
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-2.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-2.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214" alt="">
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
+                                    <p class="select-decoration__decoration-price">600 руб/кг</p></li>
+                                <li class="select-decoration__decoration-item  slider-item">  
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-1.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-1.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-1.jpg" alt="">                            
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
+                                    <p class="select-decoration__decoration-price">700 руб/кг</p></li>
+                                <li class="select-decoration__decoration-item  slider-item">
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-2.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-2.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214" alt="">
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
+                                    <p class="select-decoration__decoration-price">600 руб/кг</p></li>
+                                <li class="select-decoration__decoration-item  slider-item">  
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-1.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-1.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-1.jpg" alt="">                            
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Ягодное ассорти</h4>
+                                    <p class="select-decoration__decoration-price">700 руб/кг</p></li>
+                                <li class="select-decoration__decoration-item  slider-item">
+                                    <picture>
+                                        <source media="(max-width: 320px)" srcset="img/mobile/cake-2.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/tablet/cake-2.jpg">
+                                        <img class="select-decoration__decoration-img" src="img/cake-2.jpg" width="283" height="214" alt="">
+                                    </picture>
+                                    <h4 class="select-decoration__decoration-name">Маршмэллоу</h4>
+                                    <p class="select-decoration__decoration-price">600 руб/кг</p></li>
+                            </ul>
+                        </div>
+                        <button class="select-decoration__btn  page-btn" type="button">Выбрать</button>
                         <div class="select-decoration__slider-controls-wrap  slider__controls-wrap">
                             <button class="select-decoration__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
                             <button class="select-decoration__slider-control  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
@@ -201,16 +303,13 @@
                         <form action="#" class="order__form">
                             <p class="order__form-field-wrap">
                                 <label class="order__form-label" for="fill">Начинка</label>
-                                <input class="order__form-field  order__form-field--fill" type="text" name="fill" id="fill" value="Шоколадный ганаш">
-                            </p>
+                                <input class="order__form-field  order__form-field--fill" type="text" name="fill" id="fill" value="Шоколадный ганаш"></p>
                             <p class="order__form-field-wrap">
                                 <label class="order__form-label" for="size">Размер</label>
-                                <input class="order__form-field  order__form-field--size" type="text" name="size" id="size" value="2 кг">
-                            </p>
+                                <input class="order__form-field  order__form-field--size" type="text" name="size" id="size" value="2 кг"></p>
                             <p class="order__form-field-wrap">
                                 <label class="order__form-label" for="decoration">Оформление</label>
-                                <input class="order__form-field  order__form-field--decoration" type="text" name="decoration" id="decoration" value="Маршмэллоу">
-                            </p>
+                                <input class="order__form-field  order__form-field--decoration" type="text" name="decoration" id="decoration" value="Маршмэллоу"></p>
                             <button class="order__form-submit  page-btn" type="submit">Заказать торт</button>
                         </form>
                     </section> 
@@ -221,23 +320,31 @@
             <h2 class="reviews__title  section-title">Отзывы</h2>
             <div class="reviews__slider-wrap  slider__wrap">
                 <ul class="reviews__list  slider__list">
-                    <li class="reviews__item  slider__item">
-                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209" alt="">
+                    <li class="reviews__item  reviews__item--current  slider__item">
+                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" alt="">
                         <blockquote class="reviews__comment-wrap">
                             <cite class="reviews__comment-author">Мария
                                 <span class="reviews__comment-author-info">юрист, 33 года</span></cite>
-                            <p class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)</p>
-                            <span class="reviews__unwrap-comment">Развернуть</span>
+                            <p class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+                            <span class="reviews__unwrap-comment">Развернуть</span></p>
+
                         </blockquote></li>
                     <li class="reviews__item  slider__item">
-                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" width="209" height="209" alt="">
+                        <img class="reviews__comment-author-avatar" src="img/review-author-avatar.jpg" alt="">
                         <blockquote class="reviews__comment">
                             <cite class="reviews__comment-author">Мария
                                 <span class="reviews__comment-author-info">юрист, 33 года</span></cite>
-                            <span class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)</span>
-                            <span class="reviews__unwrap-comment">Развернуть</span>
+                            <p class="reviews__comment">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+                            <span class="reviews__unwrap-comment">Развернуть</span></p>
                         </blockquote></li>
                 </ul>
+                <div class="reviews__round-controls-wrap  slider__round-controls-wrap">
+                    <button class="slider__round-control  slider__round-control--current" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                    <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                    <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                    <button class="slider__round-control" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                    <button class="slider__round-control  slider__round-control--etc" type="button"><span class="visually-hidden">Переключить слайд</span></button>
+                </div>
                 <div class="reviews__slider-controls-wrap  slider__controls-wrap">
                     <button class="reviews__slider-control  slider__control  slider__control--left" type="button" aria-label="Вернуться к предыдущему слайду"></button>
                     <button class="reviews__slider-control  reviews__slider-control--right  slider__control  slider__control--right" type="button" aria-label="Перейти к следующему слайду"></button>
@@ -258,7 +365,7 @@
                 <p class="about-us__slogan">Принцип – натуральные ингредиенты</p>
                 <p class="about-us__slogan-interpretation">Сегодня Павел радует изделиями не только близких, но и тех, кто предпочитает качественную продукцию для торжества, а главным принципом является выбор натуральных ингредиентов.</p>
 
-                <section class="about-us__social  social">
+                <section class="about-us__social  about-us__social--after-text  social">
                     <h2 class="visually-hidden">Мы в соцсетях</h2>
                     <a class="about-us__social-item  about-us__social-item--insta  social__item  social-link  social-link--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
                     <svg width="18" height="18">
@@ -271,33 +378,50 @@
                     <a class="about-us__social-item  about-us__social-item--twit  social__item  social-link  social-link--twit" href="#"><span class="visually-hidden">страница Торты на заказ в твиттер</span></a>
                 </section>
             </div>
-            <picture>
-                <source media="(max-width: 768px)" srcset="img/tablet/baker.jpg">
-                <img class="about-us__baker-photo" src="img/baker.jpg" alt="Фото нашего кондитера Павла">
-            </picture>
+            <div class="about-us__bakers-photo-wrap">
+                <picture>
+                    <source media="(max-width: 320px)" srcset="img/mobile/baker.jpg">
+                    <source media="(max-width: 768px)" srcset="img/tablet/baker.jpg">
+                    <img class="about-us__baker-photo" src="img/baker.jpg" alt="Фото нашего кондитера Павла">
+                </picture>
+                <section class="about-us__social  about-us__social--near-photo  social">
+                    <h2 class="visually-hidden">Мы в соцсетях</h2>
+                    <a class="about-us__social-item  about-us__social-item--insta  social__item  social-link  social-link--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
+                    <svg width="18" height="18">
+                        <use xlink:href="img/sprite.svg#insta"></use>
+                    </svg></a>
+                    <a class="about-us__social-item  about-us__social-item--vk    social__item  social-link  social-link--vk" href="#"><span class="visually-hidden">страница Торты на заказ во вконтакте</span>
+                    <svg width="30" height="20.4" class="vk-icon">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a>
+                    <a class="about-us__social-item  about-us__social-item--twit  social__item  social-link  social-link--twit" href="#"><span class="visually-hidden">страница Торты на заказ в твиттер</span></a>
+                </section>
+            </div>
             <blockquote class="about-us__bakers-quote">
                 <p class="about-us__bakers-quote-text">Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное блюдо.</p>
             </blockquote>
         </section>
-        <section class="features">
-            <h2 class="section-title features__title">Наши преимущества</h2>
-            <p class="section-subtitle features__subtitle">Почему нас выбирают ?</p>
-            <ul class="features__list">
-                <li class="features__item  features__item--natural-ingredients">
-                    <b class="features__item-title">Без искусственных добавок</b>
-                    <p class="features__item-text">Работаем  с натуральными ингредиентами и свежими продуктами</p></li>
-                <li class="features__item  features__item--fresh-cake">
-                    <b class="features__item-title">Свежий торт в день торжества</b>
-                    <p class="features__item-text">Торты изготавливаются в течение суток до отправки</p></li>
-            </ul>
-        </section>
-        <section class="customer-care">
-            <div class="customer-care__inner-wrap">
-                <h2 class="customer-care__title  section-title">Забота о клиентах</h2>
-                <p class="customer-care__subtitle  section-subtitle">Для нас важно</p>
-                <p class="customer-care__text">Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно для вас и для вашего события.</p>
-            </div>
-        </section>
+        <div class="features-customer-wrap  centering-wrap">   
+            <section class="features">
+                <h2 class="section-title features__title">Наши преимущества</h2>
+                <p class="section-subtitle features__subtitle">Почему нас выбирают ?</p>
+                <ul class="features__list">
+                    <li class="features__item  features__item--natural-ingredients">
+                        <b class="features__item-title">Без искусственных добавок</b>
+                        <p class="features__item-text">Работаем  с натуральными ингредиентами и свежими продуктами</p></li>
+                    <li class="features__item  features__item--fresh-cake">
+                        <b class="features__item-title">Свежий торт в день торжества</b>
+                        <p class="features__item-text">Торты изготавливаются в течение суток до отправки</p></li>
+                </ul>
+            </section> 
+            <section class="customer-care">
+                <div class="customer-care__inner-wrap">
+                    <h2 class="customer-care__title  section-title">Забота о клиентах</h2>
+                    <p class="customer-care__subtitle  section-subtitle">Для нас важно</p>
+                    <p class="customer-care__text">Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно для вас и для вашего события.</p>
+                </div>
+            </section>
+        </div>
         <div class="order-how__outer-wrap">
             <section class="order-how" id="section-order-how">
                 <div class="order-how__inner-wrap">
@@ -305,13 +429,13 @@
                     <ol class="order-how__list">
                         <li class="order-how__item">
                             <b class="order-how__item-title">Срок заказа</b>
-                            <p class="order-how__item-text">Размещать заказы желательно за 2-3 дня. <br> На выходные заказы лучше размещать минимум за неделю. </p>
+                            <p class="order-how__item-text">Размещать заказы желательно за 2&#8209;3 дня. <span class="line-break">На выходные заказы лучше размещать минимум за неделю.</span></p>
                         </li>
                         <li class="order-how__item">
                             <b class="order-how__item-title">Доставка по городу</b>
-                            <p class="order-how__item-text">Доставка в пределах города 200 рублей , при заказе на сумму более 2000  доставка бесплатно.</p>
+                            <p class="order-how__item-text">Доставка в пределах города 200 рублей, при заказе на сумму более 2000  доставка бесплатно.</p>
                         </li>
-                        <li class="order-how__item">
+                        <li class="order-how__item  order-how__item--outside">
                             <b class="order-how__item-title">Доставка за городом</b>
                             <p class="order-how__item-text">Доставка за пределами города рассчитывается индивидуально.</p>
                         </li>
@@ -329,7 +453,7 @@
                         method="post">
                     <input class="contacts__form-field  contact-form__field" type="text" placeholder="Ваше имя">
                     <input class="contacts__form-field  contact-form__field" type="text" placeholder="Email адрес">
-                    <input class="contacts__form-field  contact-form__field" type="text" placeholder="Ваш вопрос">
+                    <textarea class="contacts__form-field  contacts__form-field--question  contact-form__field" placeholder="Ваш вопрос" rows="1"></textarea> 
                     <button class="contacts__form-submit  contact-form__submit  page-btn" type="submit">Отправить</button>
                 </form>
             </div>
@@ -362,7 +486,8 @@
                     <li><a class="main-footer__menu-link  main-nav__menu-link" href="#section-order-how">Как заказать</a></li>
                     <li><a class="main-footer__menu-link  main-nav__menu-link" href="#section-contacts">Контакты</a></li>
                 </ul>
-                <section class="main-footer__social">
+                <a class="main-footer__nav-tel  main-nav__tel" href="tel:+79068999296">+7 906 899 92 96</a>
+                <section class="main-footer__social  main-footer__social--in-oneline-with-menu">
                     <h2 class="visually-hidden">Мы в соц.сетях:</h2>
                     <a class="main-footer__social-item  main-footer__social-item--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
                     <svg width="23" height="23">
@@ -375,7 +500,19 @@
                     </svg></a>
                 </section> 
             </div>  
-            <p class="main-footer__copyright  centering-wrap">©  2018 Cakes</p> 
+            <p class="main-footer__copyright">2018 Cakes</p> 
+            <section class="main-footer__social  main-footer__social--bottom">
+                <h2 class="visually-hidden">Мы в соц.сетях:</h2>
+                <a class="main-footer__social-item  main-footer__social-item--insta" href="#"><span class="visually-hidden">страница Торты на заказ в инстаграм</span>
+                <svg width="23" height="23">
+                  <use xlink:href="img/sprite.svg#insta"></use>
+                </svg>
+                </a>
+                <a class="main-footer__social-item  main-footer__social-item--vk" href="#"><span class="visually-hidden">страница Торты на заказ во вконтакте</span>
+                <svg width="31" height="30" class="vk-icon">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                </svg></a>
+            </section>
         </footer>
     </main>
     <div style="display:none">
