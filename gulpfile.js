@@ -78,22 +78,29 @@ gulp.task(`html`, () => {
 });
 
 gulp.task(`js`, () => {
-    return gulp.src(`./build/js/**`)
+    return gulp.src(`./js/**`)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(rollup({}, `umd`))
+        .pipe(rollup({}, `iife`))
         .pipe(sourcemaps.write(``))
         .pipe(gulp.dest(`./build/js`))
 });
 
+gulp.task(`js-clean`, () => {
+    return del(`./build/js/**`)
+});
+
 gulp.task(`serve`, () => {
     server.init({
-        server: `./build/`
+        server: `./build`
     });
 
+    const onHtmlChange = gulp.series(`html`, server.reload);
+    const onJsChange = gulp.series(`js-clean`, `js`, server.reload);
+
     gulp.watch(`./less/**/*.less`, gulp.series(`style`));
-    gulp.watch(`./*.html`, gulp.parallel(`html`, server.reload));
-    gulp.watch(`./js/**/*.js`, gulp.parallel(`js`, server.reload));
+    gulp.watch(`./*.html`).on(`change`, onHtmlChange);
+    gulp.watch(`./js/**/*.js`).on(`change`, onJsChange);
 });
 
 gulp.task(`build`, gulp.series([
