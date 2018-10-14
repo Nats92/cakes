@@ -1,69 +1,97 @@
 .main-header {
     position: relative;
     
+    padding: 4px 20px;
+    background-color: #fff;
+    
     @media @tablet-width {
         padding: 0 48px;
-        background-color: #fff;
         box-sizing: border-box;
     }
 
-    @media @mobile-width {
-        padding: 0 20px;
+    @media @desktop-width {
+        padding: 0 74px;
+        background-color: transparent;
     }
 }
-.main-header__nav {
-    padding-top: 60px;
-    padding-bottom: 10px;
 
+.main-header__nav {
     @media @tablet-width {
+        display: flex;
         padding: 14px 0;
     }
 
-    @media @mobile-width {
-        padding: 4px 0;
-
-        & .main-nav__tel {
-            display: none;
-        }
+    @media @desktop-width {
+        padding-top: 60px;
+        padding-bottom: 10px; 
     }
 }
+
+.main-header__nav .main-nav__tel {
+    display: none;
+
+    @media @tablet-width {
+        display: block;
+    }
+}
+
 .main-header__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: block;
+    width: 100%;
     margin-right: auto;
+    background-color: #e7e7e7;
     
     text-transform: uppercase;
 
     @media @tablet-width {
-        position: absolute;
         left: 0;
         top: 100%;
 
-        display: block;
         width: 320px;
         background-color: #e7e7e7;
     }
 
-    @media @mobile-width {
-        width: 100%;
+    @media @desktop-width {
+        position: relative;
+
+        display: flex;
+
+        width: auto;
+        background-color: transparent;
     }
 }
+
+.main-header__menu-link {
+    @media (max-width: 1366px) {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .05); 
+    }
+}
+
 .main-header__menu li {
     @media @tablet-width {
         width: 100%;
         margin: 0;
-        padding: 13px 0;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .05); 
+        padding: 0;
+        padding-top: 5px;
 
         font-size: 12px;
         line-height: 14px;
         text-align: center;
     }
-}
-.main-header__logo {
-    margin-top: -8px;
-    margin-right: 45px;
 
+    @media @desktop-width {
+        width: auto;
+        padding-top: 0;
+    }
+}
+
+.main-header__logo {
     font-family: @playFair;
-    font-size: 23px;
+    font-size: 16px;
     line-height: 33px;
     font-weight: 700;
     font-style: normal;
@@ -78,7 +106,10 @@
         line-height: 32px;
     }
 
-    @media @mobile-width {
-        font-size: 16px;
+    @media @desktop-width {
+        margin-top: -8px;
+        margin-right: 45px;
+
+        font-size: 23px;   
     }
 }

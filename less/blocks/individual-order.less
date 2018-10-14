@@ -1,57 +1,75 @@
-.individual-order__title {
-    text-align: center;
+.individual-order {
+    padding: 0 20px;
 
-    @media @mobile-width {
-        line-height: 28px;
+    @media @desktop-width {
+        padding: 0 74px;
     }
 }
 
-.individual-order__subtitle {
-    margin-bottom: 48px;
-    padding-right: 10px;
+.individual-order__title {
+    line-height: 30px;
+    text-align: center;
+}
 
+.individual-order__subtitle {
+    padding-right: 10px;
+    margin-bottom: 13px;
+
+    line-height: 37px;
     text-align: center;
 
     @media @tablet-width {
         margin-bottom: 30px;
     }
 
-    @media @mobile-width {
-        margin-bottom: 13px;
-
-        line-height: 40px;
+    @media @desktop-width {
+        margin-bottom: 53px;
     }
 }
 
 .individual-order__steps-list {
-    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 0;
 
-    list-style: none;   
+    list-style: none; 
+
+    @media @tablet-width {
+        max-width: 1000px;
+    }  
+
+    @media @desktop-width {
+        max-width: 1700px;
+    }
 }
 
 .individual-order__steps-item {
     position: relative;
 
     margin-bottom: 35px;
-    padding: 52px 80px 58px;
+    padding: 0 19px 25px;
     background-color: #fff;
     box-shadow: 0 5px 13px 0 rgba(163, 6, 60, .1);
 
-    @media @mobile-width {
-        padding: 0 19px 21px;
+    @media @tablet-width {
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    @media @desktop-width {
+        padding: 52px 80px 60px;
     }
 }
 
 .individual-order__steps-title {
     position: absolute;
 
-    max-width: 200px;
     margin: 0;
 
     font-family: @playFair;
-    font-size: 27px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
     color: @pink-color;
     letter-spacing: 0.27px;
 
@@ -62,22 +80,22 @@
         line-height: 23px;
     }
 
-    @media @mobile-width {
-        width: auto;
+    @media @desktop-width {
+        max-width: 200px;
 
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 27px;
+        line-height: 31px;
     }
 }
 
 .individual-order__title-number {
     margin: 0;
-    margin-bottom: 6px;
+    margin-right: 5px;
 
     font-family: @playFair;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 66px;
+    font-size: 30px;
+    line-height: 45px;
     color: inherit;
     letter-spacing: 0.61px;
 
@@ -88,11 +106,12 @@
         line-height: 45px;
     }
 
-    @media @mobile-width {
-        display: inline;
-        margin-right: 5px;
+    @media @desktop-width {
+        display: block;
+        margin-bottom: 6px;
 
-        font-size: 30px;
+        font-size: 64px;
+        line-height: 66px;
     }
 }
 

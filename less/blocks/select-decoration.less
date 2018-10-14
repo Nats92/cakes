@@ -1,38 +1,41 @@
 .select-decoration {
-    padding-right: 66px;
-    padding-top: 45px;
-    padding-left: 72px;
-    padding-bottom: 61px;
-    margin-bottom: 0;
-    background-image: url("../img/decoration.png");
-    background-repeat: no-repeat;
-    background-position: 17px 197px;
+    margin: 0;
+    padding: 0 12px 34px;
 
     @media @tablet-width {
         padding-right: 8px;
         padding-top:24px;
-        padding-bottom: 33px;
+        padding-bottom: 40px;
         padding-left: 45px;
-        background-size: 119px 157px;
+        background-image: url("../img/decoration.png");
+        background-repeat: no-repeat;
+        background-size: 119px 150px;
         background-position: 4px 124px;
     }
 
-    @media @mobile-width {
-        padding: 0 12px 34px;
-        margin: 0;
-        background-image: none;
+    @media @desktop-width {
+        padding-right: 66px;
+        padding-top: 45px;
+        padding-left: 72px;
+        padding-bottom: 71px;
+        margin-bottom: 0;
+
+        background-size: 252px 340px;
+        background-position: 17px 197px;
     }
 }
 
 .select-decoration__title {
-    padding-left: 8px;
+    padding-left: 7px;
 
     @media @tablet-width {
         padding-left: 0;
     }
 
-    @media @mobile-width {
-        margin-left: 5px;
+    @media @desktop-width {
+        padding-left: 7px;
+
+        line-height: 50px;
     }
 }
 
@@ -45,121 +48,135 @@
 }
 
 .select-decoration__slider-wrap {
-    max-width: 836px;
-    margin-left: 222px;
-    margin-top: 16px;
+    margin: 0;
     margin-bottom: 32px;
-    padding: 0 45px;
+    padding-top: 64px;
     box-sizing: border-box;
 
     @media @tablet-width {
         max-width: 552px;
         margin-right: 18px;
-        margin-bottom: 24px;
+        margin-bottom: 26px;
         margin-top: 10px;
         margin-left: 104px;
+        padding: 0;
     }
 
-    @media @mobile-width {
-        margin: 0;
-        margin-bottom: 35px;
-        padding-top: 64px;
+    @media @desktop-width {
+        max-width: 836px;
+        margin-left: 222px;
+        margin-top: 16px;
+        margin-bottom: 64px;
     }
 }
 
 .select-decoration__slide-list-wrap {
     overflow: hidden;
-}
 
-.select-decoration__decoration-list {
-    /*display: flex;*/
-
-    /*@media @tablet-width {
-        max-width: 552px;
-    }*/
-
-    @media @mobile-width {
-        justify-content: center;
-
-        padding: 0;
-        margin-bottom: 18px;
+    @media @tablet-width {
+        margin: 0 70px;
     }
 }
 
+.select-decoration__decoration-list {
+    justify-content: center;
+
+    padding: 0;
+    margin-bottom: 18px;
+
+    @media @tablet-width {
+        justify-content: flex-start;
+
+        margin-bottom: 0;
+    } 
+}
+
 .select-decoration__decoration-item {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
     flex-shrink: 0;
 
-    max-width: 321px;
-    margin: 0 26px 10px 26px;
-    padding: 18px;
-    padding-top: 90px;
-    padding-bottom: 25px;
+    margin: 0 26px;
+    margin-bottom: 7px;    
     background-color: #fff;
     box-sizing: border-box;
-    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, .05);
 
     text-align: center;
 
     @media @tablet-width {
+        display: flex;
+
         width: 195px;
-        padding: 50px 0 17px;
+        margin: 0;
+        padding: 45px 0 17px;
+        box-shadow: 0 7px 13px 0.26px rgba(0, 0, 0, .05);
     }
 
-    @media @mobile-width {
-        display: none;
+    @media @desktop-width {
+        display: flex;
         justify-content: flex-start;
 
-        padding: 0;
-        box-shadow: none;
+        width: 321px;
+        padding: 18px;
+        padding-top: 90px;
+        padding-bottom: 25px;
     }
 
     &:hover,
     &:focus {
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14);
-
-        @media @mobile-width {
-            box-shadow: none;
+        @media @tablet-width {
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14);
         }
     }
 
     &--current {
-        @media @mobile-width {
-            display: flex;
-        }
+        display: flex;
+    }
+}
+
+.select-decoration__decoration-item + .select-decoration__decoration-item {
+    @media @tablet-width {
+        margin-left: 25px;
+    }
+
+    @media @desktop-width {
+        margin-left: 45px; 
     }
 }
     
 .select-decoration__decoration-img {
-    margin-bottom: 30px;
+    width: 169px;
+    height: 196px;
+    margin-bottom: 27px;
+    box-shadow: 0 7px 13px 0.26px rgba(0, 0, 0, .05);
 
     @media @tablet-width {
-        width: 175px;
-        margin-bottom: 5px;
+        width: 173px;
+        height: auto;
+        margin-bottom: 15px;
+        box-shadow: none;
     }
 
-    @media @mobile-width {
-        width: 169px;
-        height: 196px;
-        margin-bottom: 25px;
-        box-shadow: 0 7px 13px 0 rgba(0, 0, 0, .05);
+    @media @desktop-width {
+        width: 288px;
+
+        margin-bottom: 30px;
     }
 }
 .select-decoration__decoration-name {
     margin: 0;
 
     font-family: "Circe", sans-serif;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: 400;
     font-style: normal;
     color: #2f2f2f;
 
-    @media @tablet-width {
-        font-size: 14px;
-        line-height: 18px;
+    @media @desktop-width {
+        font-size: 20px;
+        line-height: 25px;
     }
 }
 
@@ -167,8 +184,8 @@
     margin: 0;
 
     font-family: "PlayfairDisplay", sans-serif;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 30px;
     font-weight: 700;
     font-style: normal;
 
@@ -177,9 +194,9 @@
         line-height: 18px;
     }
 
-    @media @mobile-width {
-        font-size: 18px;
-        line-height: 26px;
+    @media @desktop-width {
+        font-size: 22px;
+        line-height: 25px;
     }
 }
 
@@ -215,15 +232,20 @@
 }
 
 .select-decoration__btn {
-    display: none;
+    display: block;
+    min-width: 178px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin: 0 auto;
 
-    @media @mobile-width {
-        display: block;
-        min-width: 178px;
-        padding-top: 13px;
-        padding-bottom: 12px;
-        margin: 0 auto;
+    font-size: 13px;
 
-        font-size: 13px;
+    @media @tablet-width {
+        display: none;
     }
+}
+
+.select-decoration__round-controls-wrap {
+    top: 271px;
+    left: 0;
 }

@@ -14,20 +14,6 @@ body {
     color: @main-text-color;
 }
 
-.centering-wrap {
-    max-width: @max-desktop-width;
-    padding: 0 75px 0 73px;
-    margin: 0 auto;
-    box-sizing: border-box;
-
-    @media @tablet-width {
-        width: 100%;
-        padding: 0 20px;
-    }
-    @media @mobile-width {
-    }
-}
-
 .hidden {
     display: none;
 }
@@ -51,34 +37,4 @@ body {
 
 .line-break {
     display: block;
-}
-
-@keyframes smooth-next {
-    0% {
-        transform: translateX(150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes smooth-prev {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.animation-smooth {
-    &--next {
-        animation-name: smooth-next;
-        animation-duration: 500ms;  
-    }
-
-    &--prev {
-        animation-name: smooth-prev;
-        animation-duration: 500ms; 
-    }
 }

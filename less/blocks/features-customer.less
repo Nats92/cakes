@@ -1,23 +1,24 @@
 .features-customer-wrap {
-    min-height: 1287px;
-    background-image: url("../img/features-berries-illustr.png"), 
-        url("../img/features-cake-illustr.png");
+    min-height: 689px;
+    background-image: url("../img/mobile/features-cake-illustr.png");
     background-repeat: no-repeat;
-    background-position: top left, bottom -37px right 0;
+    background-position: bottom -298px center; 
     border-bottom: 1px solid transparent;
 
     @media @tablet-width {
-        min-height: 710px;
+        min-height: 714px;
         padding: 0;
         background-image: url("../img/tablet/features-berries-illustr.png"), 
-            url("../img/tablet/features-cake-illustr.png");
-        background-position: left 0 top 10px, right 0 bottom -32px;
+                          url("../img/tablet/features-cake-illustr.png");
+        background-position: left 0 top 10px, 
+                             right 0 bottom -32px;
     }
 
-    @media @mobile-width {
-        min-height: 695px;
-        background-image: none, 
-        url("../img/mobile/features-cake-illustr.png");
-        background-position: 0 0, bottom -1px left 0; 
+    @media @desktop-width {
+        min-height: 1287px;
+        background-image: url("../img/features-berries-illustr.png"), 
+                          url("../img/features-cake-illustr.png");
+        background-position: top left, 
+                             bottom -37px right 0;
     }
 }

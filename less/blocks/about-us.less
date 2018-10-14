@@ -1,182 +1,99 @@
 .about-us {
     position: relative;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
 
-    margin-bottom: 112px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 
     @media @tablet-width {
+        max-width: 1000px;
         margin-bottom: 63px;
         padding: 0 46px;
     }
 
-    @media @mobile-width {
-        padding: 0 15px 0 20px;
-        margin-bottom: 37px;
+    @media @desktop-width {
+        margin-bottom: 112px;
     }
 }
 
 .about-us__title {
-    width: 100%;
-    line-height: 90px;
-}
+    margin-bottom: 12px;
 
-.about-us__title.section-title {
+    line-height: 47px;
+
     @media @tablet-width {
-            line-height: 45px;
-    }
+        margin-bottom: 0;
 
-    @media @mobile-width {
-        position: absolute;
-        top: 0;
-        line-height: 45px;
-        width: 88%;
-    }
-}
-
-.about-us__subtitle {
-    @media @tablet-width {
-        margin-bottom: 5px;
         text-align: left;
     }
-
-    @media @mobile-width {
-        margin-bottom: 3px;
-    }
 }
 
-.about-us__text-wrap {
-    max-width: 555px;
-    margin-bottom: 191px;
+/*.about-us__title.section-title {
+    position: absolute;
+    top: 0;
+    line-height: 45px;
+    width: 88%;
 
     @media @tablet-width {
-        max-width: 328px;
-        max-height: 312px;
-        margin-right: 35px;
-        margin-bottom: 42px;
+        line-height: 45px;
     }
-
-    @media @mobile-width {
-        order: 1;
-
-        margin: 0;
-        margin-bottom: 30px;
-    }
-}
-
-.about-us__slogan {
-    margin: 0;
-    margin-bottom: 5px;
-
-    font-family: @circe;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 27px;
-
-    @media @tablet-width {
-        margin-bottom: 6px;
-
-        font-size: 15px;
-        line-height: 17px;
-    }
-}
-
-.about-us__slogan-interpretation {
-    margin: 0;
-    margin-bottom: 15px;
-
-    font-family: @circe;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 24px;
-
-    @media @tablet-width {
-        margin-bottom: 10px;
-
-        font-size: 14px;
-        line-height: 17px;
-    }
-
-    @media @mobile-width {
-        margin-bottom: 16px;
-    }
-
-    &:last-of-type {
-        margin-bottom: 20px;
-
-        @media @tablet-width {
-            max-width: 275px;
-            max-height: 31px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-
-        @media @mobile-width {
-            max-height: 100%;
-            max-width: 100%;
-            margin-bottom: 10px;
-        }
-    }
-}
+}*/
 
 .about-us__bakers-photo-wrap {
-    margin: 0 auto;
+    display: flex;
 
-    @media @mobile-width {
-        display: flex;
-        align-items: flex-start;
+    margin-bottom: 8px;
+    padding: 0 20px;
+    box-sizing: border-box;
 
-        width: 100%;
-        padding-top: 59px; 
+    @media @tablet-width {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        flex-direction: row-reverse;
+
+        width : 100%;
+        padding: 0 46px;
     }
-   
 }
 
 .about-us__baker-photo {
+    display: block;
+    width: 155px;
+    height: 155px;
+    margin-right: 35px;
     border-radius: 50%;
 
-    @media @mobile-width {
-        width: 155px;
-        height: 155px;
-        margin-right: 35px;
+    @media @tablet-width {
+        width: 311px;
+        height: 310px;
+        margin-right: 0;
     }
 }
 
 .about-us__social {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    &--after-text {
-        @media @mobile-width {
-            display: none;
-        }
-    }
-
-    &--near-photo {
-        display: none;
-
-        @media @mobile-width {
-            display: flex;
-            flex-direction: column;
-        }
+    @media @tablet-width {
+        flex-direction: row;
+        margin-right: auto;
+        margin-top: auto;
     }
 }
 
 .about-us__social-item {
     width: 36px;
     height: 36px;
+    margin-bottom: 15px;
     background-color: #fff;
-    margin-right: 18px;
 
-    @media @mobile-width {
-        margin-right: 0;
-        margin-bottom: 15px;
+    @media @tablet-width {
+        margin-right: 20px; 
+        margin-bottom: 0;
     }
 
     &--insta {
@@ -200,41 +117,134 @@
     }
 }
 
-.about-us__bakers-quote {
-    width: 100%;
-    padding-top: 70px;
-    padding-bottom: 120px;
+.about-us__subtitle {
+    margin-bottom: 3px;
+
+    line-height: 35px;
+    text-align: left;
+
+    @media @tablet-width {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+}
+
+.about-us__text-wrap {
     margin: 0;
-    background-image: url("../img/quotes.png"),
-    url("../img/baker-sighnification.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center top, center bottom;
+    margin-bottom: 40px;
+    padding: 0 15px 0 20px;
+
+    @media @tablet-width {
+        max-width: 328px;
+        padding: 0;
+        margin-right: 35px;
+        margin-bottom: 90px;
+    }
+
+    @media @desktop-width {
+        max-width: 555px;
+        margin-bottom: 191px;
+    }
+}
+
+.about-us__slogan {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-size: 15px;
+    line-height: 17px;
+
+    font-family: @circe;
+    font-weight: 700;
+    font-style: normal;
+
+    @media @tablet-width {
+        margin-bottom: 8px;
+    }
+
+    @media @desktop-width {
+        margin-bottom: 5px;
+
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+.about-us__slogan-interpretation {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-family: @circe;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    font-style: normal;
+
+    @media @tablet-width {
+        margin-bottom: 10px;
+    }
+
+    @media @desktop-width {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 10px;
+
+        @media @tablet-width {
+            max-width: 275px;
+            max-height: 31px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        @media @desktop-width {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+.about-us__bakers-quote {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    background-image: url("../img/mobile/quotes.png"),
+                      url("../img/mobile/baker-sighnification.png");
+    background-repeat: no-repeat, 
+                       no-repeat;
+    background-position: center top, 
+                         center bottom;
+    
 
     @media @tablet-width {
         padding-top: 37px;
         padding-bottom: 65px;
         background-image: url("../img/tablet/quotes.png"),
-        url("../img/tablet/baker-sighnification.png");
+                          url("../img/tablet/baker-sighnification.png");
     }
 
-    @media @mobile-width {
-        order: 2;
-
-        padding-top: 30px;
-        padding-bottom: 50px;
-        background-image: url("../img/mobile/quotes.png"),
-        url("../img/mobile/baker-sighnification.png");
+    @media @desktop-width {
+        width: 100%;
+        padding-top: 70px;
+        padding-bottom: 120px;
+        margin: 0;
+        background-image: url("../img/quotes.png"),
+                          url("../img/baker-sighnification.png");
     }
 }
+
 .about-us__bakers-quote-text {
-    max-width: 616px;
+    max-width: 260px;
     margin: 0 auto;
 
     font-family: @playFair;
     font-weight: 700;
     font-style: italic;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 13px;
+    line-height: 16px;
     text-align: center;
 
     @media @tablet-width {
@@ -244,11 +254,14 @@
         line-height: 21px;
     }
 
-    @media @mobile-width {
-        font-size: 13px;
-        line-height: 16px;
+    @media @desktop-width {
+        max-width: 616px;
+
+        font-size: 25px;
+        line-height: 38px;
     }
 }
+
 .about-us__backers-sighnification {
     display: block;
     margin: 0 auto;

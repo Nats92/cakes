@@ -1,23 +1,26 @@
 .order__title {
     margin: 0;
+    padding-left: 6px;
+    margin-bottom: 4px;
 
     font-family: @playFair;
-    font-size: 27px;
-    line-height: 70px;
+    font-size: 22px;
+    line-height: 40px;
     font-weight: 700;
     font-style: normal;
     color: @main-text-color;
 
     @media @tablet-width {
+        padding-left: 0px;
+
         font-size: 18px;
         line-height: 35px;
     }
 
-    @media @mobile-width {
-        padding-left: 4px;
-        margin-bottom: 8px;
+    @media @desktop-width {
+        margin-bottom: 12px;
 
-        font-size: 22px;
+        font-size: 27px;
     }
 }
 
@@ -28,133 +31,158 @@
 }
 
 .order__form-field-wrap {
+    width: 100%;
     margin: 0;
-    margin-right: 82px;
     margin-bottom: 10px;
 
     @media @tablet-width {
+        width: auto;
         margin-right: 21px;
+        margin-bottom: 0;
     }
     
-    @media @mobile-width {
-        width: 100%;
+    @media @desktop-width {
         margin: 0;
-        margin-bottom: 10px;
+        margin-right: 82px;
+        margin-bottom: 0;
     }
 
     &:last-of-type {
-        margin-right: 27px;
+        margin-bottom: 31px;
         
         @media @tablet-width {
-            margin-right: 41px;
+            margin-bottom: 0;
+            margin-right: 0;
         }
 
-        @media @mobile-width {
-            margin-right: 0;
-            margin-bottom: 28px;
+        @media @desktop-width {
+            margin-right: 2px;
         }
     }
 }
-.order__form-label {
-    display: block;
-    margin-bottom: 14px;
+
+.order__form-label { 
+    display: block;  
+    width: 100%;
+    margin-bottom: 2px;
+    padding-right: 17px;
+    box-sizing: border-box;
 
     font-family: @introScr;
-    font-size: 27px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 400;
     font-style: normal;
     color: @pink-color;
+    text-align: center;
 
     @media @tablet-width {
+        width: auto;
         margin-bottom: 9px;
 
         font-size: 18px;
-        line-height: 19px;
+        text-align: left;
     }
 
-    @media @mobile-width {
-        width: 96%;
-        margin-bottom: 9px;
+    @media @desktop-width {
+        margin-bottom: 6px; 
 
-        font-size: 20px;
-        text-align: center;
+        font-size: 27px;
+        line-height: 38px;
     }
 }
+
 .order__form-field {
+    width: 95%;
     border: 0;
-    border-bottom: 1px solid #c1b0af;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    box-sizing: border-box;
     outline: none;
 
     font-family: @circe;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 25px;
     font-weight: 400;
     font-style: normal;
     color: @main-text-color;
+    text-align: center;
 
     @media @tablet-width {
         padding: 0 27px;
-        border: 1px solid #dddddd;
-        border-radius: 15px;
-        box-sizing: border-box;
 
         font-size: 12px;
-        text-align: center;
     }
 
-    @media @mobile-width {
-        width: 95%;
+    @media @desktop-width {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #c1b0af;
+        outline: none;
 
-        font-size: 14px;
+        font-size: 18px;
         line-height: 30px;
+        text-align: left;
     }
 
     &--fill {
-        width: 250px;
-
         @media @tablet-width {
             width: 160px;
         }
 
-        @media @mobile-width {
-            margin-top: -4px;
+        @media @desktop-width {
+            width: 250px;
         }
     }
 
     &--size {
-        width: 140px;
+        margin-top: 4px;
 
         @media @tablet-width {
             width: 74px;
         }
+
+        @media @desktop-width {
+            width: 140px;
+        }
     }
     
     &--decoration {
-        width: 250px;
+        margin-top: 4px;
 
         @media @tablet-width {
             width: 160px;
         }
+
+        @media @desktop-width {
+            width: 250px;
+        }
     }
 }
+
 .order__form-submit {
     min-width: 226px;
-    margin-bottom: 10px;
+    margin: 0 auto;
+    padding: 12px 0;
+
+    font-size: 13px;
 
     @media @tablet-width {
         min-width: 160px;
         padding: 10px 0;
+        margin-bottom: 5px;
 
         font-size: 10px;
         line-height: 22px;
     }
 
-    @media @mobile-width {
+    @media @desktop-width {
         min-width: 226px;
-        margin: 0 auto;
-        padding: 15px 0;
+        margin-bottom: 0;
+        padding: 13px 0;
 
         font-size: 13px;
+        line-height: 26px;
     }
 }

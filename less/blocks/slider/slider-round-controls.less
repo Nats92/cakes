@@ -1,0 +1,34 @@
+.slider__round-controls-wrap {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+
+    @media @tablet-width {
+        display: none;
+    }
+}
+
+.slider__round-control {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #dddddd;
+
+    &--current {
+        width: 8px;
+        height: 8px;
+        background-color: @pink-color;
+    }
+
+    &--etc {
+        width: 4px;
+        height: 4px;
+    }
+}

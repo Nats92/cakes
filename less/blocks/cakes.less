@@ -1,38 +1,56 @@
 .cakes {
-    margin-top: -69px;
-    margin-bottom: 44px;
-    padding: 0 73px;
+    margin-top: 0;
+    margin-bottom: 45px;
+    padding: 0px 20px;
     box-sizing: border-box;
 
     @media @tablet-width {
-        margin-top: 0;
-        margin-bottom: 35px;
-        padding: 0px 20px;
+        margin-bottom: 55px;
+    }
+
+    @media @desktop-width {
+        margin-top: -69px;
+        margin-bottom: 44px;
+        padding: 0 73px;
     }
 }
 
 .cakes__title {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     @media @tablet-width {
-        margin-bottom: 35px;
+        text-align: left;
+        margin-bottom: 30px;
     }
-    @media @mobile-width {
-        margin-bottom: 25px;
+
+    @media @desktop-width {
+        margin-bottom: 52px;
     }
 }
 
 .cakes__list {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-
+    max-width: 500px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     list-style: none;
+
+    @media @tablet-width { 
+        position: relative;
+
+        max-width: 1000px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    @media @desktop-width {
+        max-width: 1700px;
+    }
 }
 
 .cakes__item {
@@ -41,60 +59,104 @@
     align-items: stretch;
     flex-wrap: wrap;
 
-    width: 100%;
-
-    @media @mobile-width {
-        margin-bottom: 0;
-    }
-
-    &--right-big-img .cakes__cake-type--big {
-        margin-left: 41px;
-
-        @media @tablet-width {
-            margin-left: 20px;
-        }
-
-        @media @mobile-width {
-            margin-left: 0;
-        }
-    }
-
-    &--left-big-img .cakes__cake-type--big {
-        margin-right: 41px;
-
-        @media @tablet-width {
-            margin-right: 20px;
-        }
-
-        @media @mobile-width {
-            margin-right: 0;
-        }
-    }
-}
-
-.cakes__cake-type-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-
-    width: 484px;
-    margin-bottom: 46px;
+    margin-bottom: 10px;
 
     @media @tablet-width {
-        width: 289px;
-        margin-bottom: 18px;
+        flex-grow: 1;
+        margin-bottom: 20px;
     }
 
-    @media @mobile-width {
-        width: 100%;
-        margin-bottom: 0;
+    @media @desktop-width {
+        margin-bottom: 44px;
+    }
+
+    &--big {
+        @media @tablet-width {
+            position: absolute;
+
+            margin: 0;
+        }
+    }
+
+    &--classic {
+        @media @tablet-width {
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &--moussee,
+    &--wedding {
+        @media @tablet-width {
+            padding-left: 440px;
+        }
+
+        @media @desktop-width {
+            padding-left: 735px;
+            margin-left: auto;
+        }
+    }
+
+    &--men {
+        @media @tablet-width {
+            padding-right: 440px;
+        }
+
+        @media @desktop-width {
+            padding-right: 735px;
+            margin-right: auto;
+        }
+
+        & .cakes__cake-type-title {
+            @media @tablet-width {
+                top: 30px;
+            }
+        }
+    }
+
+    &--women {
+        @media @tablet-width {
+            padding-right: 440px;
+            margin-bottom: 0;
+        }
+
+        @media @desktop-width {
+            padding-right: 735px;
+            margin-right: auto;
+        }
+
+        & .cakes__cake-type-title {
+            @media @tablet-width {
+                top: 32px;
+            }
+        }
+    }
+
+    &--children {
+
+        @media @tablet-width {
+            right: 0;
+            bottom: 0;
+        }
+
+        & .cakes__cake-type-title {
+            @media @tablet-width {
+                left: 28px;
+                top: 30px;
+            }
+        }
     }
 }
 
-.cakes__cake-type {
+
+.cakes__item--children .cakes__cake-link {
+    background-color: #f3f3f5;
+}
+
+.cakes__cake-link {
     position: relative;
     
+    width: 100%;
     display: block;
     background-color: #fff;
     box-shadow: 0 10px 13px 0 rgba(163, 6, 60, .05);
@@ -111,103 +173,45 @@
     &:focus .right-arrow-icon {
         fill: @pink-color;
     }
+}
 
-    &--big {
-        width: 695px;
-        height: 652px;
-        margin-bottom: 46px;  
+.cakes__cake-type-img {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
 
-        @media @tablet-width {
-            width: 419px;
-            height: 388px;
-            margin-bottom: 18px;
-        }
-
-        @media @mobile-width {
-            width: 280px;
-            height: 120px;
-            margin-bottom: 11px;
-        }
+    @media @tablet-width {
+        width: 288px;
+        height: 184px;
     }
 
-    &--small {
+    @media @desktop-width {
         width: 484px;
         height: 305px;
-
-        &:first-child {
-            margin-bottom: 40px;
-
-            @media @tablet-width {
-                margin-bottom: 18px;
-            }
-        }
-
-        @media @tablet-width {
-            width: 288px;
-            height: 184px;
-        }
-
-        @media @mobile-width {
-            width: 280px;
-            height: 120px;
-            margin-bottom: 11px;
-
-            &:first-child {
-                margin-bottom: 9px;
-            }
-        }
-    }
-
-    &--men .cakes__cake-type-title,
-    &--women .cakes__cake-type-title {
-        @media @tablet-width {
-            top: 30px;
-        }
-
-        @media @mobile-width {
-            top: 10px;
-        }
-    }
-
-    &--children {
-        background-color: #f4f2f5;
-    }
-
-    &--children .cakes__cake-type-title {
-        @media @tablet-width {
-            top: 30px;
-            left: 30px;
-        }
-
-        @media @mobile-width {
-            top: 10px;
-            left: 13px;
-        }
     }
 }
 
-.right-arrow-icon {
-    position: absolute;
-    right: 65px;
-    bottom: 35px;
-    vertical-align: middle;
-
-    fill: #757575;
-
+.cakes__item--big  .cakes__cake-type-img {
     @media @tablet-width {
-        display: none;
+        width: 419px;
+        height: 388px;  
     }
-}  
 
-.cakes__cake-type-title {
+    @media @desktop-width {
+        width: 695px;
+        height: 652px;
+    }
+}
+
+.cakes__cake-type {
     position: absolute;
-    left: 46px;
-    top: 34px;
+    left: 11px;
+    top: 11px;
 
     margin: 0;
 
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 14px;
+    line-height: 18px;
     color: @main-text-color;
 
     @media @tablet-width {
@@ -218,45 +222,39 @@
         line-height: 17px;
     }
 
-    @media @mobile-width {
-        left: 11px;
-        top: 11px;
+    @media @desktop-width {
+        left: 46px;
+        top: 36px;
+        font-size: 24px;
+        line-height: 28px;
+    }
 
-        font-size: 14px;
+    &--men,
+    &--women,
+    &--children {
+
+        @media @tablet-width {
+            top: 30px;
+        }
     }
 }
 
-.cakes__cake-type-subtitle {
+.cakes__amount-of-type {
     display: block;
 
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 15px;
     color: rgba(45, 40, 41, .7);
     text-decoration: none;
 
-    @media @tablet-width {
-        font-size: 12px;
-        line-height: 16px;
+    @media @desktop-width {
+        font-size: 20px;
+        line-height: 24px;    
     }
 }
 
-.cakes__cake-type-img {
-    @media @mobile-width {
-        width: 280px;
-        height: 120px;
-    }
-}
-
-.cakes__cake-type-look-text {
-    position: absolute;
-    right: 65px;
-    bottom: 30px;
-
-    margin: 0;
-
-    font-size: 20px;
-    line-height: 29px;
-    color: @main-text-color;
+.cakes__cake-look {
+    display: none;
 
     & .right-arrow-icon {
         position: relative;
@@ -267,12 +265,37 @@
     }
 
     @media @tablet-width {
+        position: absolute;
         right: 73px;
         bottom: 15px;
+
+        display: block;
+        margin: 0;
+
         font-size: 12px;
+        line-height: 29px;
+        color: @main-text-color;
     }
 
-    @media @mobile-width {
-        display: none;
+    @media @desktop-width {
+        right: 65px;
+        bottom: 30px;
+
+        font-size: 20px;
     }
 }
+
+.right-arrow-icon {
+    display: none;
+
+    @media @desktop-width {
+        position: absolute;
+        right: 65px;
+        bottom: 35px;
+        vertical-align: middle;
+
+        display: inline-block;
+
+        fill: #757575;
+    }
+}  

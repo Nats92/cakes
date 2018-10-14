@@ -1,41 +1,50 @@
 .select-size {
-    padding-bottom: 58px;
+    margin-bottom: 9px;
+    padding-bottom: 15px;
 
     @media @tablet-width {
-        margin-bottom: 21px;
-        padding: 30px 44px 20px;
+        margin-bottom: 25px;
+        padding: 30px 44px 10px;
     }
 
-    @media @mobile-width {
-        margin-bottom: 11px;
-        padding-bottom: 15px;
+    @media @desktop-width {
+        margin-bottom: 35px;
+        padding-bottom: 45px;
     }
 }
-.select-size__sizes-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
 
-    max-width: 865px;
+.select-size__sizes-list {
     margin: 0 auto;
-    padding: 77px 0; 
+    margin-bottom: 18px;
+    padding: 38px 0; 
     box-sizing: border-box;
 
     list-style: none;
     overflow: hidden;
 
     @media @tablet-width {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
         max-width: 583px;
+        margin-bottom: 8px;
         padding: 48px 0 42px;
     }
 
-    @media @mobile-width {
-        padding-bottom: 46px;
+    @media @desktop-width {
+        max-width: 865px;
+        padding: 77px 0; 
     }
 }
+
 .select-size__sizes-item {
-    margin-bottom: 10px;
+    display: none;
+
+    width: 100%;
+    flex-shrink: 0;
+    outline: 0;
 
     font-family: @circe;
     font-size: 18px;
@@ -44,20 +53,21 @@
     font-style: normal;
     color: rgba(47, 47, 47, .8);
 
-    @media @mobile-width {
-        width: 100%;
-        flex-shrink: 0;
-    }
+    @media @tablet-width {
+        display: block;
 
-    @media @mobile-width {
-        display: none;
+        width: auto;
+        margin-bottom: 10px;
     }
 
     &--current {
-        @media @mobile-width {
-            display: block;
-        }
+        display: block;
     }
+}
+
+.select-size__sizes-item:hover .select-size__sizes-img,
+.select-size__sizes-item:focus .select-size__sizes-img {
+    box-shadow: 0 6px 16px 0 rgba(103, 12, 40, .14);
 }
 
 .select-size__img-wrap {
@@ -66,25 +76,33 @@
         align-items: center;
         justify-content: center;
 
-        min-height: 205px;    
-        margin-bottom: 10px;
+        min-height: 206px;    
+        margin-bottom: 20px;
+    }
+
+    @media @tablet-width {
+        min-height: 0;
+        margin-bottom: 0;
     }
 }
 
 .select-size__sizes-img {
     display: block;
-    margin-bottom: 12px;
+    width: 77px;
+    height: 77px;
+
     border-radius: 50%;
-    padding: 14px;
 
     @media @tablet-width {
         padding: 0;
         margin-bottom: 21px;
     } 
 
-    @media @mobile-width {
+    @media @desktop-width {
         width: 110px;
         height: 110px;
+        margin-bottom: 12px;
+        padding: 14px;
     }
 
     &:hover,
@@ -100,6 +118,11 @@
             width: 77px;
             height: 77px;
         }   
+
+        @media @desktop-width {
+            width: 110px;
+            height: 110px; 
+        }
     }
 
     &--2kg {
@@ -109,6 +132,11 @@
         @media @tablet-width {
             width: 108px;
             height: 108px;
+        } 
+
+        @media @desktop-width {
+            width: 155px;
+            height: 154px; 
         }
     }
 
@@ -119,6 +147,11 @@
         @media @tablet-width {
             width: 120px;
             height: 120px;
+        } 
+
+        @media @desktop-width {
+            width: 173px;
+            height: 174px; 
         }
     }
 
@@ -129,6 +162,11 @@
         @media @tablet-width {
             width: 140px;
             height: 140px;
+        } 
+
+        @media @desktop-width {
+            width: 200px;
+            height: 202px; 
         }
     }
 }
@@ -141,34 +179,43 @@
     
 .select-size__sizes-signification {
     margin: 0;
-    padding-left: 14px;
+
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
 
     @media @tablet-width {
         padding-left: 0;
+        text-align: left;
 
         font-size: 12px;
         line-height: 20px;
     }
 
-    @media @mobile-width {
-        width: 100%;
+    @media @desktop-width {
+        margin: 0;
+        padding-left: 14px;
 
-        text-align: center;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 30px;
     }
 }
+
 .select-size__btn {
-    display: none;
+    display: block;
+    min-width: 178px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+    margin-bottom: 11px;
 
-    @media @mobile-width {
-        display: block;
-        min-width: 178px;
-        padding-top: 13px;
-        padding-bottom: 12px;
-        margin: 0 auto;
-        margin-bottom: 11px;
+    font-size: 13px;
 
-        font-size: 13px;
+    @media @tablet-width {
+        display: none;
     }
+}
+
+.select-size .line-break {
+    display: inline;
 }

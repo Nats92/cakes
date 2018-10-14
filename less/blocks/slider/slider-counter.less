@@ -1,0 +1,31 @@
+.slider__counter-wrap {
+    position: absolute;
+    z-index: 10;
+}
+
+.slider__counter {
+    position: relative;
+    font-family: @circe;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(47, 47, 47, .7);
+
+    @media @desktop-width {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    &--current {
+        padding-right: 2px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -4px;
+
+            margin-right: 1px;
+
+            content: "/";
+        }
+    }
+}

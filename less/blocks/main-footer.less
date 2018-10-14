@@ -1,124 +1,142 @@
 .main-footer {
-    background-color: #e8e8e8;
-    text-align: center;
+    background-color: #898989;
+
+    text-align: left;
 
     @media @tablet-width {
-        padding: 0 18px;
+        padding: 30px 20px 0 20px;
     }
 
-    @media @mobile-width {
-        background-color: #898989;
-
-        text-align: left;
+    @media @desktop-width {
+        background-color: #e8e8e8;
+        text-align: center;
     }
 }
 
 .main-footer__logo {
     font-family: @playFair;
     font-size: 28px;
-    line-height: 36px;
+    line-height: 43px;
     font-weight: 700;
     font-style: normal;
+    color: #fff;
     letter-spacing: 1.4px;
-    color: @main-text-color;
+    color: #fff;
+
+    margin-bottom: 17px;
 
     @media @tablet-width {
+        align-self: flex-start;
+
         margin-right: 57px;
+        margin-bottom: 0;
 
         font-size: 18px;
         line-height: 32px;
     }
 
-    @media @mobile-width {
+    @media @desktop-width {
         margin-bottom: 18px;
 
         font-size: 28px;
-        line-height: 43px;
-        color: #fff;
+        line-height: 36px;
     }
 }
 
 .main-footer__centering-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: flex-start;
-
-    max-width: 1221px;
-    padding: 32px 0 40px 0;
+    max-width: 500px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 36px 20px;
+    padding-bottom: 0;
+    border-color: rgba(255, 255, 255, .1);
 
     @media @tablet-width {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        padding: 28px 0;
+        align-items: flex-end;
+
+        max-width: 1000px;
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
 
-    @media @mobile-width {
-        flex-direction: column;
-        align-items: flex-start;
+    @media @desktop-width {
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: flex-start;
 
-        padding-top: 33px;
-        border-color: rgba(255, 255, 255, .1);
+        max-width: 1221px;
+        padding: 32px 0 40px 0;
     }
 }
 
 .main-footer__menu {
-    min-width: 747px;
-    padding-top: 5px;
+    display: block;
+    padding: 0;
+
+    text-align: left;
 
     @media @tablet-width {
         padding: 2px 0;
-        min-width: auto;
+        margin-bottom: 30px;
     }
 
-    @media @mobile-width {
-        display: block;
-        padding: 0;
-
-        text-align: left;
+    @media @desktop-width {
+        min-width: 747px;
+        padding-top: 5px;
     }
 }
 
 .main-footer__menu li {
-    margin-right: 47px;
+    margin-bottom: 15px;
+
+    @media @tablet-width {
+        margin-right: 39px;
+        margin-bottom: 0;
+    }
+
+    @media @desktop-width {
+        margin-right: 47px;
+    }
 }
 
 .main-footer__menu-link {
+    display: block;
+
     font-family: @circe;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    color: #fff;
     font-weight: 400;
     font-style: normal;
-    color: @main-text-color;
 
     @media @tablet-width {
         font-size: 13px;
-        line-height: 15px;
+        line-height: 30px;
     }
 
-    @media @mobile-width {
-        display: block;
-        margin-bottom: 15px;
-
-        font-size: 14px;
-        line-height: 17px;
-        color: #fff;
+    @media @desktop-width {
+        font-size: 16px;
+        line-height: 32px;
+        color: @main-text-color;
     }
 }
 
 .main-footer__nav-tel {
-    display: none;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
 
-    @media @mobile-width {
-        display: block;
-        margin: 0;
-        margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
 
-        font-size: 14px;
-        line-height: 17px;
-        color: #fff;
+    @media @tablet-width {
+        display: none;
     }
 }
 
@@ -127,13 +145,10 @@
     display: inline-block;
     vertical-align: bottom;
     margin-right: 17px;
+    fill: #fff;
+    stroke: #fff;
 
     opacity: .4;
-
-    @media @mobile-width {
-        fill: #fff;
-        stroke: #fff;
-    }
 
     &:hover,
     &:focus {
@@ -152,71 +167,87 @@
     &--vk {
         width: 31px;
         height: 28px;
+        padding-bottom: 2px;
 
-        fill: #000;
-        stroke: #000;
         stroke-width: 8;
     }
 }
 
 .main-footer__social {
-    &--bottom {
-        display: none;
+    margin-bottom: 33px;
 
-        @media (max-width:768px) and (min-width: 321px) {
-            display: inline-block;
-        }
-    }
+    @media @tablet-width {
+        order: 1;
 
-    &--in-oneline-with-menu {
-        display: inline-block;
-
-        @media (max-width:768px) and (min-width: 321px) {
-            display: none;
-        }
+        margin-bottom: 0;
+        margin-right: auto;
     }
 }
 
 .main-footer__copyright {
     position: relative;
-    
-    display: inline-block;
-    padding: 13px 0;
-    padding-left: 18px;
-    margin: 0;
 
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 18px;
+
+    color: rgba(255, 255, 255, .5);
+    text-align: left;
+    line-height: 28px;
+    
     font-family: @circe;
     font-size: 12px;
-    line-height: 22px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.48px;
-    text-align: center;
-    color: rgba(0, 0, 0, .5);
 
     @media @tablet-width {
-        display: inline-block;
+        width: auto;
         margin-right: 35px;
+        margin-left: auto;
+        margin-top: 13px;
+
+        text-align: center;
+        line-height: 22px;
     }
 
-    @media @mobile-width {
-        padding: 0;
+    @media @desktop-width {
+        padding: 13px 0;
         padding-left: 18px;
 
-        color: rgba(255, 255, 255, .5);
-        text-align: left;
-        line-height: 34px;
+        text-align: center;
+        color: rgba(0, 0, 0, .5);
     }
 
     &::before {
         position: absolute;
         left: 0;
-        bottom: 14px;
+        bottom: 1px;
 
         content:"©";
 
-        @media @mobile-width {
-            bottom: 1px;
+        @media @desktop-width {
+            bottom: 14px;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 20px;
+        
+        content:"";
+
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        @media @tablet-width {
+            top: -15px;
+            left: -226px;
+
+            width: 638px;
         }
     }
 }

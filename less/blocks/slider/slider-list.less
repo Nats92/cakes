@@ -1,0 +1,149 @@
+.slider__wrap {
+    position: relative;
+}
+  
+.slider__list {
+    position: relative;
+
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+
+    list-style: none;
+}
+
+.slider__item {
+    flex-shrink: 0;
+}
+
+.slider__controls-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    
+    @media @mobile-width {
+        display: none;
+    }
+}
+
+.slider__control {
+    display: block;
+    width: 9px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 9px 16px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
+
+    &--right {
+        background-image: url("../img/arrow-right.png");
+        outline: none;
+
+        &:hover,
+        &:focus {
+            background-image: url("../img/arrow-right-hover.png");
+        }
+    }
+
+    &--left {
+        background-image: url("../img/arrow-left.png");
+        outline: none;
+
+        &:hover,
+        &:focus {
+            background-image: url("../img/arrow-left-hover.png");
+        }
+    }
+
+    @media @tablet-width {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+.slider__round-controls-wrap {
+    display: none;
+
+    @media @mobile-width {
+        position: absolute;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 5;
+    }
+}
+
+.slider__round-control {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #dddddd;
+
+    &--current {
+        width: 8px;
+        height: 8px;
+        background-color: @pink-color;
+    }
+
+    &--etc {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+.slider__counter-wrap {
+    position: absolute;
+    z-index: 10;
+}
+
+.slider__counter {
+    position: relative;
+    font-family: @circe;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(47, 47, 47, .7);
+
+    @media @tablet-width {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    &--current {
+        padding-right: 2px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -4px;
+
+            margin-right: 1px;
+
+            content: "/";
+        }
+    }
+}

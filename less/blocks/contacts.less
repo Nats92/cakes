@@ -1,76 +1,81 @@
 .contacts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-
-    min-height: 780px;
-
-    background-image: url("../img/contacts-straw.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom right;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
 
     @media @tablet-width {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        max-width: 100%;
         min-height: 549px;
+        padding: 0 45px;
         background-image: url("../img/tablet/contacts-straw.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom right;
     }
 
-    &.centering-wrap {
-        @media @tablet-width {
-            padding: 0 47px;
-        }
+    @media @desktop-width {
+        min-height: 780px;
 
-        @media @mobile-width {
-            padding: 0 20px;
-            padding-bottom: 51px;
-            background-image: none;
-        }
+        background-image: url("../img/contacts-straw.jpg");
     }
 }
+
 .contacts__title {
-    width: 100%;
-    margin-bottom: 20px;
-
     @media @tablet-width {
-        margin-bottom: 0;
+        width: 100%;
+
+        text-align: left;
+    }
+
+    @media @desktop-width {
+        margin-bottom: 20px;
     }
 }
+
 .contacts__subtitle {
-    width: 100%;
-    margin-bottom: 13px;
+    line-height: 36px;
 
     @media @tablet-width {
+        width: 100%;
+        margin-bottom: 15px;
+
         font-size: 22px;
         line-height: 29px;
         text-align: left;
     }
 
-    @media @mobile-width {
-        margin-bottom: 4px;
+    @media @desktop-width {
+        width: 100%;
+        margin-bottom: 13px;
     }
 }
+
 .contacts__form-wrap {
-    width: 553px;
-    margin-right: 78px;
+    margin-bottom: 27px;
 
     @media @tablet-width {
-        max-width: 346px;
+        width: 346px;
         margin-right: 67px;
     }
 
-    @media @mobile-width {
-        margin-right: 0;
-        margin-bottom: 27px;
+    @media @desktop-width {
+        width: 553px;
+        margin-right: 78px;
     }
 }
+
 .contacts__fill-in-form {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 7px;
 
     font-family: @circe;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 17px;
     font-weight: 400;
     font-style: normal;
     color: #000;
@@ -78,30 +83,32 @@
     @media @tablet-width {
         max-width: 262px;
         margin-bottom: 12px;
-
-        font-size: 14px;
-        line-height: 17px;
     }
 
-    @media @mobile-width {
-        margin-bottom: 7px;
+    @media @desktop-width {
+        margin-bottom: 50px;
+        
+        font-size: 20px;
+        line-height: 24px;
     }
 }
+
 .contacts__form-field {
+    margin-bottom: 10px;
+    padding: 16px 10px;
     border: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    margin-bottom: 37px;
-    
+    border-radius: 5px;
+    background-color: #fff;
+
     font-family: @circe;
     font-size: 14px;
     line-height: 18px;
 
-    @media @tablet-width {
-        margin-bottom: 10px;
-        padding: 16px 10px;
+    @media @desktop-width {   
         border: 0;
-        border-radius: 5px;
-        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        margin-bottom: 37px;
+        background-color: transparent;
     }
 
     &:hover,
@@ -116,76 +123,84 @@
     }
 
     &--question {
-        margin-bottom: 80px;
+        min-height: 89px;
+        margin-bottom: 20px;
         resize: none; 
 
         @media @tablet-width {
             min-height: 86px;
-            margin-bottom: 33px;
+            margin-bottom: 31px;
         }
 
-        @media @mobile-width {
-            min-height: 89px;
-            margin-bottom: 20px;
+        @media @desktop-width {
+            margin-bottom: 80px;
         }
     }
 }
-.contacts__form-submit {
-    align-self: flex-start;
 
+.contacts__form-submit {
     min-width: 180px;
+    margin: 0 auto;
+    padding: 13px 0;
 
     font-family: @circe;
-    font-weight: 400;
     font-size: 19px;
     line-height: 26px;
+    font-weight: 400;
     font-style: normal;
     text-transform: none;
 
     @media @tablet-width {
         min-width: 160px;
+        padding: 10px 0;
+        margin: 0;
+        margin-right: auto;
 
         font-size: 14px;
-        line-height: 19px;
+        line-height: 22px;
     }
 
-    @media @mobile-width {
+    @media @desktop-width {
+        align-self: flex-start;
+
         min-width: 180px;
-        margin: 0 auto;
-        padding: 13px 0;
 
         font-size: 19px;
         line-height: 26px;
     }
 }
+
 .contacts__contact-items-wrap {
-    max-width: 337px;
+    max-width: 260px;
+    margin-bottom: 48px;
 
     font-family: @circe;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 17px;
     color: #000;
     font-weight: 400;
     font-style: normal;
 
-    @media @tablet-width {
-        max-width: 260px;
+    @media @desktop-width {
+        max-width: 337px;
 
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 20px;
+        line-height: 24px;
     }
 }
+
 .contacts__contact-item-tel-wrap {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 
     font: inherit; 
     color: inherit;
 
-    @media @tablet-width {
-        margin-bottom: 18px;
+    @media @desktop-width {
+        margin-bottom: 25px;
     }
 }
+
 .contacts__contact-item {
     display: inline-block;
 
@@ -194,13 +209,14 @@
     text-decoration: none;
 
     &--mail {
-        margin-bottom: 23px;
+        margin-bottom: 17px;
 
-        @media @tablet-width {
-            margin-bottom: 17px;
+        @media @desktop-width {
+            margin-bottom: 23px;
         }
     }
 }
+
 .contacts__social-title {
     margin: 0;
     margin-bottom: 23px;
@@ -216,11 +232,11 @@
         margin-bottom: 8px;
     }
 }
+
 .contacts__social-item {
     width: 62px;
     height: 63px;
     margin-right: 27px;
-    padding-bottom: 3px;
     box-sizing: border-box;
 
     &--vk {
